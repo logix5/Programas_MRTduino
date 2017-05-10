@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include <MrtDuino.h>
+#include <MrtDuino.h> //incluimos la libreria de MRT
 
 double tiempo_inicio;
 double programa;
