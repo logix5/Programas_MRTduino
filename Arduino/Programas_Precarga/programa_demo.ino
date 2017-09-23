@@ -132,21 +132,61 @@ void programa_2(){
 }
 
 void programa_3(){
-Serial.println("Programa 3");
+Serial.println("Programa 3 -- Tren con dos IR");
             for(;;){
-      
-      
+					if((irSensor3.isDigitalSensed(0)) & (irSensor4.isDigitalSensed(0))){
+						motor17.runMotor(80);
+						motor18.runMotor(80);
+					}
+					if((irSensor3.isDigitalSensed(0)) & (irSensor4.isDigitalSensed(1))){
+						motor17.runMotor(0);
+						motor18.runMotor(80);
+					}
+					if((irSensor3.isDigitalSensed(1)) & (irSensor4.isDigitalSensed(0))){
+						motor17.runMotor(80);
+						motor18.runMotor(0);
+					}
+					if((irSensor3.isDigitalSensed(1)) & (irSensor4.isDigitalSensed(1))){
+						motor17.runMotor(80);
+						motor18.runMotor(0);
+					}
       }
 }
 
 void programa_4(){
-Serial.println("Programa 4");
+Serial.println("Programa 4 -- Wally");
             for(;;){
-      
+					if((irSensor3.isDigitalSensed(0)) & (irSensor4.isDigitalSensed(0))){
+						motor17.runMotor(100);
+						motor18.runMotor(100);
+					}
+					if((irSensor3.isDigitalSensed(0)) & (irSensor4.isDigitalSensed(1))){
+						motor17.runMotor(-100);
+						motor18.runMotor(-100);
+						delay(1000*1);
+						motor17.runMotor(100);
+						motor18.runMotor(-100);
+						delay(1000*0.5);
+					}
+					if((irSensor3.isDigitalSensed(1)) & (irSensor4.isDigitalSensed(0))){
+						motor17.runMotor(-100);
+						motor18.runMotor(-100);
+						delay(1000*1);
+						motor17.runMotor(-100);
+						motor18.runMotor(100);
+						delay(1000*0.5);
+					}
+					if((irSensor3.isDigitalSensed(1)) & (irSensor4.isDigitalSensed(1))){
+						motor17.runMotor(-100);
+						motor18.runMotor(-100);
+						delay(1000*2);
+						motor17.runMotor(100);
+						motor18.runMotor(-100);
+						delay(1000*0.5);
+					}
       
       }
 }
-
 
 void programa_5(){
 Serial.println("Programa 5 -- Pato");
@@ -179,10 +219,36 @@ Serial.println("Programa 5 -- Pato");
 }
 
 void programa_6(){
-Serial.println("Programa 6");
+Serial.println("Programa 6 -- Sumo");
             for(;;){
-      
-      
+					if((irSensor3.isDigitalSensed(1)) & (irSensor4.isDigitalSensed(1))){
+						motor17.runMotor(100);
+						motor18.runMotor(100);
+					}
+					if((irSensor3.isDigitalSensed(1)) & (irSensor4.isDigitalSensed(0))){
+						motor17.runMotor(-100);
+						motor18.runMotor(-100);
+						delay(1000*1);
+						motor17.runMotor(100);
+						motor18.runMotor(-100);
+						delay(1000*0.5);
+					}
+					if((irSensor3.isDigitalSensed(0)) & (irSensor4.isDigitalSensed(1))){
+						motor17.runMotor(-100);
+						motor18.runMotor(-100);
+						delay(1000*1);
+						motor17.runMotor(-100);
+						motor18.runMotor(100);
+						delay(1000*0.5);
+					}
+					if((irSensor3.isDigitalSensed(0)) & (irSensor4.isDigitalSensed(0))){
+						motor17.runMotor(-100);
+						motor18.runMotor(-100);
+						delay(1000*2);
+						motor17.runMotor(100);
+						motor18.runMotor(-100);
+						delay(1000*0.5);
+					}
       }
 }
 
@@ -279,9 +345,42 @@ Serial.println("Programa 8 -- Mando con llave");
 
 
 void programa_9(){
-Serial.println("Programa 9");
+Serial.println("Programa 9 -- Pistola");
             for(;;){
-      
+					if((int)irrecv1.IR_KEY_VALUE==61){
+						motor17.runMotor(100);
+						delay(1000*0.4);
+					}
+					if((int)irrecv1.IR_KEY_VALUE==63){
+						motor17.runMotor(-100);
+						delay(1000*0.4);
+					}
+					if(isIRreleased){
+						motor17.runMotor(0);
+						motor18.runMotor(0);
+					}
+					if(irSensor3.isDigitalSensed(1)){
+						led9.runSensor(1);
+						speaker16.tone2(262,500);
+						speaker16.tone2(294,500);
+						speaker16.tone2(330,500);
+						speaker16.tone2(349,500);
+						delay(1000*5);
+						led9.runSensor(0);
+					}
+					
+					if(irrecv1.decode(&results1)){
+						 isIRreleased=false;
+						 irLastTime=millis();
+						 ir_id=ir_id_set.ReadId(5);
+						 irrecv1.setButtonValues(results1.value,ir_id);
+						 irrecv1.resume();
+					}
+					else{
+						 isIRreleased=true;
+						irrecv1.IR_KEY_VALUE=0;
+					}
+    
       
       }
 }
