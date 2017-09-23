@@ -69,10 +69,65 @@ void programa_1(){
 }
 
 void programa_2(){
-            Serial.println("Programa 2");
+            Serial.println("Programa 2 -- Mando");
             for(;;){
-                   
-                    }
+				if((int)irrecv1.IR_KEY_VALUE==44){
+					motor17.runMotor(100);
+					motor18.runMotor(100);
+					delay(1000*0.4);
+				}
+				if((int)irrecv1.IR_KEY_VALUE==62){
+					motor17.runMotor(-100);
+					motor18.runMotor(-100);
+					delay(1000*0.4);
+				}
+				if((int)irrecv1.IR_KEY_VALUE==61){
+					motor17.runMotor(100);
+					motor18.runMotor(-100);
+					delay(1000*0.4);
+				}
+				if((int)irrecv1.IR_KEY_VALUE==63){
+					motor17.runMotor(-100);
+					motor18.runMotor(100);
+					delay(1000*0.4);
+				}
+				if((int)irrecv1.IR_KEY_VALUE==54){
+					motor17.runMotor(50);
+					motor18.runMotor(100);
+					delay(1000*0.4);
+				}
+				if((int)irrecv1.IR_KEY_VALUE==60){
+					motor17.runMotor(100);
+					motor18.runMotor(50);
+					delay(1000*0.4);
+				}
+				if((int)irrecv1.IR_KEY_VALUE==57){
+					motor17.runMotor(-100);
+					motor18.runMotor(-50);
+					delay(1000*0.4);
+				}
+				if((int)irrecv1.IR_KEY_VALUE==51){
+					motor17.runMotor(-50);
+					motor18.runMotor(-100);
+					delay(1000*0.4);
+				}
+				if(isIRreleased){
+					motor17.runMotor(0);
+					motor18.runMotor(0);
+				}
+				
+				if(irrecv1.decode(&results1)){
+					 isIRreleased=false;
+					 irLastTime=millis();
+					 ir_id=ir_id_set.ReadId(5);
+					 irrecv1.setButtonValues(results1.value,ir_id);
+					 irrecv1.resume();
+				}
+				else{
+					 isIRreleased=true;
+					irrecv1.IR_KEY_VALUE=0;
+				}
+			}
 
 }
 
@@ -159,10 +214,66 @@ void programa_7(){
 	}
 
 void programa_8(){
-Serial.println("Programa 8");
+Serial.println("Programa 8 -- Mando con llave");
             for(;;){
-      
-      
+				  if(irSensor3.isDigitalSensed(1)){
+					if((int)irrecv1.IR_KEY_VALUE==44){
+						motor17.runMotor(100);
+						motor18.runMotor(100);
+						delay(1000*0.4);
+					}
+					if((int)irrecv1.IR_KEY_VALUE==62){
+						motor17.runMotor(-100);
+						motor18.runMotor(-100);
+						delay(1000*0.4);
+					}
+					if((int)irrecv1.IR_KEY_VALUE==61){
+						motor17.runMotor(100);
+						motor18.runMotor(-100);
+						delay(1000*0.4);
+					}
+					if((int)irrecv1.IR_KEY_VALUE==63){
+						motor17.runMotor(-100);
+						motor18.runMotor(100);
+						delay(1000*0.4);
+					}
+					if((int)irrecv1.IR_KEY_VALUE==54){
+						motor17.runMotor(50);
+						motor18.runMotor(100);
+						delay(1000*0.4);
+					}
+					if((int)irrecv1.IR_KEY_VALUE==60){
+						motor17.runMotor(100);
+						motor18.runMotor(50);
+						delay(1000*0.4);
+					}
+					if((int)irrecv1.IR_KEY_VALUE==57){
+						motor17.runMotor(-100);
+						motor18.runMotor(-50);
+						delay(1000*0.4);
+					}
+					if((int)irrecv1.IR_KEY_VALUE==51){
+						motor17.runMotor(-50);
+						motor18.runMotor(-100);
+						delay(1000*0.4);
+					}
+					if(isIRreleased){
+						motor17.runMotor(0);
+						motor18.runMotor(0);
+					}
+				}
+						
+				if(irrecv1.decode(&results1)){
+					 isIRreleased=false;
+					 irLastTime=millis();
+					 ir_id=ir_id_set.ReadId(5);
+					 irrecv1.setButtonValues(results1.value,ir_id);
+					 irrecv1.resume();
+				}
+				else{
+					 isIRreleased=true;
+					irrecv1.IR_KEY_VALUE=0;
+				}
       }
 }
 
