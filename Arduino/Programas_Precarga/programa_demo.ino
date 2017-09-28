@@ -34,7 +34,7 @@ double getLastTime(){
 void setup(){
     Serial.begin(9600);
     SoftPWMBegin();
-    tiempo_inicio = 5;
+    tiempo_inicio = 3;
     programa = 0;
 	ir_id=ir_id_set.ReadId();
     irrecv1.enableIRIn();
@@ -464,53 +464,53 @@ void loop(){
       programa=1;
     
         if(((programa)==(1))){
-            speaker16.tone2(262,500);
-            delay(300);
+            speaker16.tone2(262,200);
+            delay(200);
         }
         if(((programa)==(2))){
-            speaker16.tone2(294,500);
-             delay(300);
+            speaker16.tone2(294,200);
+             delay(200);
         }
     
     if(((programa)==(3))){
-            speaker16.tone2(330,500);
-             delay(300);
+            speaker16.tone2(330,200);
+             delay(200);
         }
     if(((programa)==(4))){
-            speaker16.tone2(349,500);
-             delay(300);
+            speaker16.tone2(349,200);
+             delay(200);
         }
     if(((programa)==(5))){
-            speaker16.tone2(392,500);
-             delay(300);
+            speaker16.tone2(392,200);
+             delay(200);
         }
     if(((programa)==(6))){
-            speaker16.tone2(440,500);
-             delay(300);
+            speaker16.tone2(440,200);
+             delay(200);
         }
     if(((programa)==(7))){
-            speaker16.tone2(494,500);
-             delay(300);
+            speaker16.tone2(494,200);
+             delay(200);
         }
     if(((programa)==(8))){
-            speaker16.tone2(2093,500);
-             delay(300);
+            speaker16.tone2(2093,200);
+             delay(200);
         }
     if(((programa)==(9))){
-            speaker16.tone2(2349,500);
-             delay(300);
+            speaker16.tone2(2349,200);
+             delay(200);
         }
     if(((programa)==(10))){
-            speaker16.tone2(2637,500);
-             delay(300);
+            speaker16.tone2(2637,200);
+             delay(200);
         }
     if(((programa)==(11))){
-            speaker16.tone2(2794,500);
-             delay(300);
+            speaker16.tone2(2794,200);
+             delay(200);
         }
     if(((programa)==(12))){
-            speaker16.tone2(3136,500);
-             delay(300);
+            speaker16.tone2(3136,200);
+             delay(200);
         }
         
         lastTime = millis()/1000.0;
