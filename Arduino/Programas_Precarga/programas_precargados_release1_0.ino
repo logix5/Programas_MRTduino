@@ -76,42 +76,42 @@ void programa_2(){
         if((int)irrecv1.IR_KEY_VALUE==44){
           motor1.runMotor(1,100);
           motor2.runMotor(2,100);
-          delay(1000*0.4);
+          delay(1000*0.2);
         }
         if((int)irrecv1.IR_KEY_VALUE==62){
           motor1.runMotor(1,-100);
           motor2.runMotor(2,-100);
-          delay(1000*0.4);
+          delay(1000*0.2);
         }
         if((int)irrecv1.IR_KEY_VALUE==61){
           motor1.runMotor(1,100);
           motor2.runMotor(2,-100);
-          delay(1000*0.4);
+          delay(1000*0.2);
         }
         if((int)irrecv1.IR_KEY_VALUE==63){
           motor1.runMotor(1,-100);
           motor2.runMotor(2,100);
-          delay(1000*0.4);
+          delay(1000*0.2);
         }
         if((int)irrecv1.IR_KEY_VALUE==54){
           motor1.runMotor(1,50);
           motor2.runMotor(2,100);
-          delay(1000*0.4);
+          delay(1000*0.2);
         }
         if((int)irrecv1.IR_KEY_VALUE==60){
           motor1.runMotor(1,100);
           motor2.runMotor(2,50);
-          delay(1000*0.4);
+          delay(1000*0.2);
         }
         if((int)irrecv1.IR_KEY_VALUE==57){
           motor1.runMotor(1,-100);
           motor2.runMotor(2,-50);
-          delay(1000*0.4);
+          delay(1000*0.2);
         }
         if((int)irrecv1.IR_KEY_VALUE==51){
           motor1.runMotor(1,-50);
           motor2.runMotor(2,-100);
-          delay(1000*0.4);
+          delay(1000*0.2);
         }
         if(isIRreleased){
           motor1.runMotor(1,0);
@@ -287,42 +287,42 @@ Serial.println("Programa 8 -- Mando con llave");
           if((int)irrecv1.IR_KEY_VALUE==44){
             motor1.runMotor(1,100);
             motor2.runMotor(2,100);
-            delay(1000*0.4);
+            delay(1000*0.2);
           }
           if((int)irrecv1.IR_KEY_VALUE==62){
             motor1.runMotor(1,-100);
             motor2.runMotor(2,-100);
-            delay(1000*0.4);
+            delay(1000*0.2);
           }
           if((int)irrecv1.IR_KEY_VALUE==61){
             motor1.runMotor(1,100);
             motor2.runMotor(2,-100);
-            delay(1000*0.4);
+            delay(1000*0.2);
           }
           if((int)irrecv1.IR_KEY_VALUE==63){
             motor1.runMotor(1,-100);
             motor2.runMotor(2,100);
-            delay(1000*0.4);
+            delay(1000*0.2);
           }
           if((int)irrecv1.IR_KEY_VALUE==54){
             motor1.runMotor(1,50);
             motor2.runMotor(2,100);
-            delay(1000*0.4);
+            delay(1000*0.2);
           }
           if((int)irrecv1.IR_KEY_VALUE==60){
             motor1.runMotor(1,100);
             motor2.runMotor(2,50);
-            delay(1000*0.4);
+            delay(1000*0.2);
           }
           if((int)irrecv1.IR_KEY_VALUE==57){
             motor1.runMotor(1,-100);
             motor2.runMotor(2,100);
-            delay(1000*0.4);
+            delay(1000*0.2);
           }
           if((int)irrecv1.IR_KEY_VALUE==51){
             motor1.runMotor(1,-50);
             motor2.runMotor(2,-100);
-            delay(1000*0.4);
+            delay(1000*0.2);
           }
           if(isIRreleased){
             motor1.runMotor(1,0);
@@ -350,11 +350,11 @@ Serial.println("Programa 9 -- Pistola");
             for(;;){
           if((int)irrecv1.IR_KEY_VALUE==61){
             motor1.runMotor(1,100);
-            delay(1000*0.4);
+            delay(1000*0.2);
           }
           if((int)irrecv1.IR_KEY_VALUE==63){
             motor1.runMotor(1,-100);
-            delay(1000*0.4);
+            delay(1000*0.2);
           }
           if(isIRreleased){
             motor1.runMotor(1,0);
