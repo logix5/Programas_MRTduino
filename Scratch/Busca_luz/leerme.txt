@@ -1,0 +1,5 @@
+Los motores estan a velocidad baja, por lo que son dependientes de las pilas- Si se empiezan a gastar, 
+el root no se moverá. Lo mejor es poner engranajes e ir con velocidades mayores, y luego otra opción es
+tener una alimentación más potente.
+
+También es clave el montaje hecho, de ahi que se adjunten fotos. Esta creado con el kit mrtduino
