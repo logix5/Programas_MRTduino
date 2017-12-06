@@ -73,83 +73,79 @@ void programa_1(){
 void programa_2(){
             Serial.println("Programa 2 -- Mando");
             for(;;){
-        if((int)irrecv1.IR_KEY_VALUE==44){
-          motor1.runMotor(1,100);
-          motor2.runMotor(2,100);
-          delay(1000*0.2);
-        }
+         if((int)irrecv1.IR_KEY_VALUE==44){
+        motor1.runMotor(1,100);
+        motor4.runMotor(2,100);
+    }else{
         if((int)irrecv1.IR_KEY_VALUE==62){
-          motor1.runMotor(1,-100);
-          motor2.runMotor(2,-100);
-          delay(1000*0.2);
+            motor1.runMotor(1,-100);
+            motor4.runMotor(2,-100);
+        }else{
+            if((int)irrecv1.IR_KEY_VALUE==61){
+                motor1.runMotor(1,100);
+                motor4.runMotor(2,-100);
+            }else{
+                if((int)irrecv1.IR_KEY_VALUE==63){
+                    motor1.runMotor(1,-100);
+                    motor4.runMotor(2,100);
+                }else{
+                    if((int)irrecv1.IR_KEY_VALUE==54){
+                        motor1.runMotor(1,0);
+                        motor4.runMotor(2,100);
+                    }else{
+                        if((int)irrecv1.IR_KEY_VALUE==60){
+                            motor1.runMotor(1,100);
+                            motor4.runMotor(2,0);
+                        }else{
+                            if((int)irrecv1.IR_KEY_VALUE==51){
+                                motor1.runMotor(1,0);
+                                motor4.runMotor(2,-100);
+                            }else{
+                                if((int)irrecv1.IR_KEY_VALUE==57){
+                                    motor1.runMotor(1,-100);
+                                    motor4.runMotor(2,0);
+                                }else{
+                                    motor1.runMotor(1,0);
+                                    motor4.runMotor(2,0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-        if((int)irrecv1.IR_KEY_VALUE==61){
-          motor1.runMotor(1,100);
-          motor2.runMotor(2,-100);
-          delay(1000*0.2);
-        }
-        if((int)irrecv1.IR_KEY_VALUE==63){
-          motor1.runMotor(1,-100);
-          motor2.runMotor(2,100);
-          delay(1000*0.2);
-        }
-        if((int)irrecv1.IR_KEY_VALUE==54){
-          motor1.runMotor(1,50);
-          motor2.runMotor(2,100);
-          delay(1000*0.2);
-        }
-        if((int)irrecv1.IR_KEY_VALUE==60){
-          motor1.runMotor(1,100);
-          motor2.runMotor(2,50);
-          delay(1000*0.2);
-        }
-        if((int)irrecv1.IR_KEY_VALUE==57){
-          motor1.runMotor(1,-100);
-          motor2.runMotor(2,-50);
-          delay(1000*0.2);
-        }
-        if((int)irrecv1.IR_KEY_VALUE==51){
-          motor1.runMotor(1,-50);
-          motor2.runMotor(2,-100);
-          delay(1000*0.2);
-        }
-        if(isIRreleased){
-          motor1.runMotor(1,0);
-          motor2.runMotor(2,0);
-        }
+    }
         
-        if(irrecv1.decode(&results1)){
-           isIRreleased=false;
-           irLastTime=millis();
-           ir_id=ir_id_set.ReadId(5);
-           irrecv1.setButtonValues(results1.value,ir_id);
-           irrecv1.resume();
-        }
-        else{
-           isIRreleased=true;
-          irrecv1.IR_KEY_VALUE=0;
-        }
-      }
-
+    if(irrecv1.decode(&results1)){
+         isIRreleased=false;
+         irLastTime=millis();
+         ir_id=ir_id_set.ReadId(5);
+         irrecv1.setButtonValues(results1.value,ir_id);
+         irrecv1.resume();
+    }
+    else{
+         isIRreleased=true;
+    }
+}
 }
 
 void programa_3(){
 Serial.println("Programa 3 -- Tren con dos IR");
             for(;;){
           if((irSensor3.isDigitalSensed(0)) & (irSensor4.isDigitalSensed(0))){
-            motor1.runMotor(1,80);
-            motor2.runMotor(2,80);
+            motor1.runMotor(1,70);
+            motor2.runMotor(2,70);
           }
           if((irSensor3.isDigitalSensed(0)) & (irSensor4.isDigitalSensed(1))){
             motor1.runMotor(1,0);
-            motor2.runMotor(2,80);
+            motor2.runMotor(2,70);
           }
           if((irSensor3.isDigitalSensed(1)) & (irSensor4.isDigitalSensed(0))){
-            motor1.runMotor(1,80);
+            motor1.runMotor(1,70);
             motor2.runMotor(2,0);
           }
           if((irSensor3.isDigitalSensed(1)) & (irSensor4.isDigitalSensed(1))){
-            motor1.runMotor(1,80);
+            motor1.runMotor(1,70);
             motor2.runMotor(2,0);
           }
       }
@@ -284,64 +280,61 @@ void programa_8(){
 Serial.println("Programa 8 -- Mando con llave");
             for(;;){
           if(irSensor3.isDigitalSensed(1)){
-          if((int)irrecv1.IR_KEY_VALUE==44){
-            motor1.runMotor(1,100);
-            motor2.runMotor(2,100);
-            delay(1000*0.2);
-          }
-          if((int)irrecv1.IR_KEY_VALUE==62){
+            if((int)irrecv1.IR_KEY_VALUE==44){
+        motor1.runMotor(1,100);
+        motor4.runMotor(2,100);
+    }else{
+        if((int)irrecv1.IR_KEY_VALUE==62){
             motor1.runMotor(1,-100);
-            motor2.runMotor(2,-100);
-            delay(1000*0.2);
-          }
-          if((int)irrecv1.IR_KEY_VALUE==61){
-            motor1.runMotor(1,100);
-            motor2.runMotor(2,-100);
-            delay(1000*0.2);
-          }
-          if((int)irrecv1.IR_KEY_VALUE==63){
-            motor1.runMotor(1,-100);
-            motor2.runMotor(2,100);
-            delay(1000*0.2);
-          }
-          if((int)irrecv1.IR_KEY_VALUE==54){
-            motor1.runMotor(1,50);
-            motor2.runMotor(2,100);
-            delay(1000*0.2);
-          }
-          if((int)irrecv1.IR_KEY_VALUE==60){
-            motor1.runMotor(1,100);
-            motor2.runMotor(2,50);
-            delay(1000*0.2);
-          }
-          if((int)irrecv1.IR_KEY_VALUE==57){
-            motor1.runMotor(1,-100);
-            motor2.runMotor(2,100);
-            delay(1000*0.2);
-          }
-          if((int)irrecv1.IR_KEY_VALUE==51){
-            motor1.runMotor(1,-50);
-            motor2.runMotor(2,-100);
-            delay(1000*0.2);
-          }
-          if(isIRreleased){
-            motor1.runMotor(1,0);
-            motor2.runMotor(2,0);
-          }
+            motor4.runMotor(2,-100);
+        }else{
+            if((int)irrecv1.IR_KEY_VALUE==61){
+                motor1.runMotor(1,100);
+                motor4.runMotor(2,-100);
+            }else{
+                if((int)irrecv1.IR_KEY_VALUE==63){
+                    motor1.runMotor(1,-100);
+                    motor4.runMotor(2,100);
+                }else{
+                    if((int)irrecv1.IR_KEY_VALUE==54){
+                        motor1.runMotor(1,0);
+                        motor4.runMotor(2,100);
+                    }else{
+                        if((int)irrecv1.IR_KEY_VALUE==60){
+                            motor1.runMotor(1,100);
+                            motor4.runMotor(2,0);
+                        }else{
+                            if((int)irrecv1.IR_KEY_VALUE==51){
+                                motor1.runMotor(1,0);
+                                motor4.runMotor(2,-100);
+                            }else{
+                                if((int)irrecv1.IR_KEY_VALUE==57){
+                                    motor1.runMotor(1,-100);
+                                    motor4.runMotor(2,0);
+                                }else{
+                                    motor1.runMotor(1,0);
+                                    motor4.runMotor(2,0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-            
-        if(irrecv1.decode(&results1)){
-           isIRreleased=false;
-           irLastTime=millis();
-           ir_id=ir_id_set.ReadId(5);
-           irrecv1.setButtonValues(results1.value,ir_id);
-           irrecv1.resume();
-        }
-        else{
-           isIRreleased=true;
-          irrecv1.IR_KEY_VALUE=0;
-        }
-      }
+    }
+        
+    if(irrecv1.decode(&results1)){
+         isIRreleased=false;
+         irLastTime=millis();
+         ir_id=ir_id_set.ReadId(5);
+         irrecv1.setButtonValues(results1.value,ir_id);
+         irrecv1.resume();
+    }
+    else{
+         isIRreleased=true;
+    }
+   }
+   }
 }
 
 
