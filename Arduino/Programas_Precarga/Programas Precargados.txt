@@ -1,0 +1,47 @@
+Los motores en código son:
+
+MrtMotor motor1;  ML1 
+MrtMotor motor3;  ML2
+MrtMotor motor2;  MR1
+MrtMotor motor4;  MR2
+
+Los puertos usados para conectar los sensores:
+
+Port 1 para un botón
+Port 2 para otro botón
+Port 3 para un infrarrojo
+Port 4 para un infrarrojo
+Port 5 para un infrarrojo
+Port 6 para el LDR
+
+Port 9 para un led
+Port 10 para otro led
+Port 16 para el altavoz
+
+El mando se conecta en un sitio fijo que es conector RC, a la derecha de la placa
+
+Cada programa tiene lo siguiente:
+
+Gimnasta :  mueve los 4 motores, así que donde lo pongas, si quieres poner uno o más. Esto de cara a retos avanzados en el preprogramado
+
+Mando:  con el receptor en el RC.
+
+Tren: Con dos infrarrojos, puertos 3 y 4 => El 3 sensor izq, y el 4 el derecha
+
+Wally: Con dos infrarrojos , puertos 3 y 4  => El 3 sensor izq, y el 4 el derecha
+
+Pato: Con dos infrarrojos , puertos 3 y 4  => El 3 sensor izq, y el 4 el derecha
+
+Sumo: Con dos infrarrojos , puertos 3 y 4  => El 3 sensor izq, y el 4 el derecha
+
+Peonza: El led del puerto 9 para ver el encendido al pulsar, y el motor ML1 , osea el Motor izquierda, el de arriba
+
+Coche con llave:  el mando , y el infrarrojo del puerto 3
+
+Pistola: Mando, el led del puerto 9, el altavoz del puerto 16, el infrarrojo del Puerto 3 y el motor ML1 , osea Motor izquierda el de arriba
+
+Parpadeo de leds:  Leds del puerto 9 y 10, que alternan si uno esta encendido el otro esta pagado ===> crear unidad
+
+Lámpara:  El LDR del puerto 6, que cuando se le de luz, enciende los leds del puerto 9 y 10 y los motores ML1 y MR1 los dos de arriba de cada lado
+
+Piano: Hace música con el altavoz en el 16 y luego conectados los dos botones , los tres infrroajos y el LDR. Cada uno emite una melodía de la escala
