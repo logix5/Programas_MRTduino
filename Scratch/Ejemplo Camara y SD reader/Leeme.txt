@@ -1,0 +1,3 @@
+Tener cuidado, porque el tamaño de la aplicación es muy grande, y falla muchas veces la carga
+Esta aplicación lo suyo es meterla con otro placa que se encargue de movimientos, etc, y se comunique con esta
+para disparar la foto
