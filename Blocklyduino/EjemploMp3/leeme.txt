@@ -1,0 +1,4 @@
+En la tarjeta SD, debes crear un directorio 002 y dentro ubicar los archivos que se pasan con el ejemplo. Lo mejor es copiar la carpeta tal como se
+encuentra en el ejemplo.
+El botón para ir pasando de cada pista de audio, es el botón rojo de la placa "Start"
+Para crear tus propios audios, nosotros hemos usado la web http://www.fromtexttospeech.com/
