@@ -10,7 +10,7 @@ uint8_t velocidad=0;
 
 void modo1(void)
 {
-   debug("Programa 1.El Gimnasta\n"); 
+   debug("Programa 1.El Gimnasta.Mueve los dos motores\n"); 
     while(1){
                 dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 10);
                 dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 10);
@@ -112,7 +112,7 @@ void modo6(void)
 
 void modo7(void)
 {
-    debug("Programa 7.Peonza \n"); 
+    debug("Programa 7.Peonza.Aumenta velocidad con tiempo\n"); 
     velocidad=0;
     while(1){
         
@@ -122,31 +122,28 @@ void modo7(void)
               TIFR |= (1<<OCF1A) ; //clear timer1 overflow flag    
               velocidad++;  
              }           
-             if(touch(1, PRESSED) == TRUE){ 
-             if(velocidad < 2){    
-                 dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 2);
-                 dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 2);
-                     }
-             if ((velocidad >= 2) & (velocidad <4) ){
-                          
-                 dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 4);
-                 dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 4);
-                     }
-             if ((velocidad >= 4) & (velocidad <6) ){
-                         
-                 dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 6);
-                 dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 6);
-                     }
-             if ((velocidad >= 6) & (velocidad <7) ){
-                         
-                 dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 8);
-                 dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 8);
-                     }
-             if (velocidad >= 7){
-                         
-                        dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 10);
-                        dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 10); 
-                     }
+             if(touch(1, PRESSED) == TRUE)
+			 { 
+				 if(velocidad < 2){    
+					 dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 2);
+					 dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 2);
+						 }
+				 if ((velocidad >= 2) & (velocidad <4) ){		  
+					 dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 4);
+					 dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 4);
+						 }
+				 if ((velocidad >= 4) & (velocidad <6) ){ 
+					 dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 6);
+					 dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 6);
+						 }
+				 if ((velocidad >= 6) & (velocidad <7) ){	 
+					 dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 8);
+					 dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 8);
+						 }
+				 if (velocidad >= 7){
+					 dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 10);
+					 dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 10); 
+						 }
               }
             else
                 { 
@@ -167,34 +164,91 @@ void modo8(void)
 
 void modo9(void)
 {
-    debug("Programa 9. \n"); 
-   // while(1){
+    debug("Programa 9.Diana \n"); 
+    while(1){
+        if(rc(LEFT_KEY) == TRUE){
+            dc_motor(LEFT_MOTOR_1,FORWARD_DIRECTION,8);
+        }
+        
+        if(rc(RIGHT_KEY) == TRUE){
+            dc_motor(LEFT_MOTOR_1, BACKWARD_DIRECTION,-8);
+        }
+           
+        if(rc(OFF_KEY) == TRUE){
        
-   // }    
+            dc_motor(LEFT_MOTOR_1, STOP_DIRECTION, 0);
+            dc_motor(RIGHT_MOTOR_1, STOP_DIRECTION, 0);
+        }
+		
+		if(ir_Modul(2, 50, SENSE) == TRUE){ 
+        
+            digitalWrite(1, HIGH);
+            digitalWrite(2, HIGH);
+            tone(6, 800, 500);
+            tone(6, 1300, 500);
+            tone(6, 1800, 500);
+            delay(0, 0, 5, 0);
+            digitalWrite(1, LOW);
+            digitalWrite(2, LOW);
+        }
+	
+    }    
  }
 
 void modo10(void)
 {
-    debug("Programa 10. \n"); 
-   // while(1){
-       
-   // }    
+    debug("Programa 10.Parapadeo cada seg de los leds \n"); 
+    while(1){
+        digitalWrite(1, HIGH);
+        digitalWrite(2, HIGH);
+        delay(0, 0, 1, 0);
+        digitalWrite(1, LOW);
+        digitalWrite(2, LOW);
+        delay(0, 0, 1, 0);
+		}    
  }
 
 void modo11(void)
 {
-    debug("Programa 11. \n"); 
-   // while(1){
+    debug("Programa 11.Si no hay luz activamos motores y leds \n"); 
+    while(1){
+	    if(cds(5, 0, DARK) == TRUE)
+		{ 
+			dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 10);
+			dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 10);
+			digitalWrite(1, HIGH);
+			digitalWrite(2, HIGH);
+        }
+        else
+		{
+			dc_motor(LEFT_MOTOR_1, STOP_DIRECTION, 0);
+			dc_motor(RIGHT_MOTOR_1, STOP_DIRECTION, 0);
+			digitalWrite(1, LOW);
+			digitalWrite(2, LOW);
+		}
        
-   // }    
+    }    
  }
 
 void modo12(void)
 {
-    debug("Programa 12. \n"); 
-   // while(1){
+    debug("Programa 12.Barrera y luces. Al pulsar sube\n"); 
+    while(1){
+       if(touch(1, PRESSED) == TRUE)
+	   { 
        
-   // }    
+            servo(3, -90);
+            digitalWrite(1, HIGH);
+            digitalWrite(2, LOW);
+            delay(0, 0, 2, 0);
+            servo(3, 0);
+		}    
+	else
+		{ 
+	     digitalWrite(1, LOW);
+         digitalWrite(2, HIGH);
+		} 
+	}	
  }
    
 
