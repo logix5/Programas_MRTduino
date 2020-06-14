@@ -1,11 +1,71 @@
+/*------------------------------------------------------------------------------------
+PROGRAMA DE PRECARGA ATMEGA32 -- PLACA MRT3 Versión 2.2
+
+Para seleccionar el modo, conectar el altavazo a la salida 6 (OUT6) y el botón
+en la entrada 1 (IN1). Hay que contar el numero de beep para seleccionarel programa 
+deseado. Ahora describinos los diferentes modos.
+
+NOTA: Hemos usado el timer1 como reloj para los preprogramados, pero si usaramos en 
+algun modo el servo, NO FUNCIONARIA. Para ello habría que evaluar el Timer 2. Usar 
+el timer 2 implica que es de 8 bit y cambian los registros de configuración.
+
+NOTA2: La configuración de frecuencias para reproducir diferentes melodias con sus notas
+en la salida 6 no ha funcionado, pues no sonaba la escala musical.Quizás es por usar 
+el Timer 1 o porqueno estoy en el pin adecuado
+
+NOTA3: El Timer0 se usa para los motores sentido inverso, porque no funcionaban bien
+
+CONEXIONES DEL HW
+
+ENTRADAS
+
+- Botón				IN1
+- Infrarrojo 1		IN2
+- Infrarrojo 2		IN3
+- LDR				IN5
+
+
+SALIDAS
+
+- Led 1 -- pensado para el verde 	OUT1
+- Led 2 -- pensado para el rojo 	OUT2
+- Altavoz							OUT6
+
+RECEPTOR del MANDO
+- Tiene conector especifico y pone RC
+
+MOTORES
+- Conectores dedicados. LEFT y RIGHT
+
+MODOS
+
+Modo1 -- Gimnasta, mueve los dos motores en diferente sentidos y con diferentes tiempos
+Modo2 -- Mando, para vehículos
+Modo3 -- Siguelíneas con 2 infrarrojos
+Modo4 -- Avoider, evitar estrellarse
+Modo5 -- Pato, robot que te sigue
+Modo6 -- Sumo, robot paar pelear dentro de un círculo o cuadrado creado con cinta negra
+Modo7 -- Peonza, se pulsa el botón y gira para soltar la peonza
+Modo8 -- Mando con llave. Si se activa la llave funciona el mando como el Modo2
+Modo9 -- Diana, robot que si le das para y toca melodia
+Modo10 - Parpadeo de leds cada seg.
+Modo11 - Si no hay luz, se enciende y se activan los motores. Pensado para cuando no hay 
+Modo12 - Barrera con motores. Se pulsa botón se mueve motor y led pasan de rojo a verde
+Modo13 - Semáforo vehiculos de dos luces. Cuando pulsas el botón en verde se pone rojo
+
+---------------------------------------------------------------------------------------*/
+
+
 #include "functions_codes.h" 
 #include <avr/io.h>
 
+//Declaración de constantes
 #define T_PULSAR 3
 #define T_ROJO  10
 #define T_VERDE  20
 #define MAX_PROGRAMS 13
 
+//Declaración de Variables
 uint8_t timerOverflowCount=0; 
 uint8_t programa=0; 
 uint8_t velocidad=0;
