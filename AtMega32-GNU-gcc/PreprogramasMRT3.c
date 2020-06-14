@@ -386,22 +386,27 @@ void modo11(void)
 
 void modo12(void)
 {
-    debug("Programa 12.Barrera y luces. Al pulsar sube\n"); 
+    debug("Programa 12.Barrera y luces.\n"); 
+	digitalWrite(1, LOW);
+    digitalWrite(2, HIGH);
     while(1){
+				
        if(touch(1, PRESSED) == TRUE)
 	   { 
        
-            servo(3, -90);
-            digitalWrite(1, HIGH);
-            digitalWrite(2, LOW);
-            delay(0, 0, 2, 0);
-            servo(3, 0);
+            dc_motor(LEFT_MOTOR_1, BACKWARD_DIRECTION, -4);
+			digitalWrite(1, HIGH);
+            digitalWrite(2, LOW); 
+			delay(0, 0, 1, 500);
+			dc_motor(LEFT_MOTOR_1, STOP_DIRECTION, 0);
+			delay(0, 0, 3, 0);
+            dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 4);
+			digitalWrite(1, LOW);
+            digitalWrite(2, HIGH); 
+			delay(0, 0, 2, 0);
+			dc_motor(LEFT_MOTOR_1, STOP_DIRECTION, 0);
 		}    
-	else
-		{ 
-	     digitalWrite(1, LOW);
-         digitalWrite(2, HIGH);
-		} 
+	
 	}	
  }
  
@@ -446,6 +451,7 @@ void modo12(void)
 		  { 
 		   if (estado_semaforo==1)
 				{  
+				  delay(0, 0, 2, 0);
 				  estado_semaforo=0;
 				  tiempo_semaforo=0;
 				  digitalWrite(1, LOW);
@@ -465,7 +471,7 @@ int main(void){
     TCNT1 = 0;
    
  while(1){
-    
+	    
     if((TIFR & (1<<OCF1A)) != 0)
       {
          TCNT1 = 0; 
@@ -527,7 +533,7 @@ int main(void){
          }  
       }
      
-      if(touch(5, PRESSED) == TRUE){
+      if(touch(1, PRESSED) == TRUE){
           
         programa += 1;
         timerOverflowCount=0;
