@@ -13,6 +13,7 @@
 
 int Programa = 0;
 float tiempo = 0;
+unsigned int Umbral_IR = 400;
 const char wifi_ssid[]="Otto_Wifi";
 const char wifi_pass[]="otto1234";
 
@@ -85,6 +86,24 @@ void Stop() {
   setDcMotor(MOTOR_R1,0,0);
 }
 
+void programa1() {
+  Serial.println("Programa 1 -- Movimiento motores -- Gimnasta");
+  while (1 == 1) {
+    setDcMotor(MOTOR_L1,0,255);
+    setDcMotor(MOTOR_R1,0,255);
+    delay(2*1000);
+    setDcMotor(MOTOR_L1,1,255);
+    setDcMotor(MOTOR_R1,1,255);
+    delay(2*1000);
+    setDcMotor(MOTOR_L1,0,200);
+    setDcMotor(MOTOR_R1,0,200);
+    delay(2*1000);
+    setDcMotor(MOTOR_L1,1,200);
+    setDcMotor(MOTOR_R1,1,200);
+    delay(2*1000);
+  }
+}
+
 void programa2() {
   Serial.println("Programa 2 -- Mando");
   while (1 == 1) {
@@ -107,37 +126,19 @@ void programa2() {
   }
 }
 
-void programa1() {
-  Serial.println("Programa 1 -- Movimiento motores -- Gimnasta");
-  while (1 == 1) {
-    setDcMotor(MOTOR_L1,0,255);
-    setDcMotor(MOTOR_R1,0,255);
-    delay(1*1000);
-    setDcMotor(MOTOR_L1,1,255);
-    setDcMotor(MOTOR_R1,1,255);
-    delay(1*1000);
-    setDcMotor(MOTOR_L1,0,200);
-    setDcMotor(MOTOR_R1,0,200);
-    delay(1*1000);
-    setDcMotor(MOTOR_L1,1,200);
-    setDcMotor(MOTOR_R1,1,200);
-    delay(1*1000);
-  }
-}
-
 void programa3() {
   Serial.println("Programa 3 -- Tren");
   while (1 == 1) {
-    if (!(digitalRead(35) & !digitalRead(36))) {
+    if (analogRead(35) < Umbral_IR & analogRead(36) < Umbral_IR) {
       Forward(255);
     }
-    if (digitalRead(35) & !digitalRead(36)) {
+    if (analogRead(35) > Umbral_IR & analogRead(36) < Umbral_IR) {
       TurnRight(255);
     }
-    if (!digitalRead(35) & digitalRead(36)) {
+    if (analogRead(35) < Umbral_IR & analogRead(36) > Umbral_IR) {
       TurnLeft(255);
     }
-    if (digitalRead(35) & digitalRead(36)) {
+    if (analogRead(35) > Umbral_IR & analogRead(36) > Umbral_IR) {
       TurnRight(255);
     }
   }
@@ -146,22 +147,22 @@ void programa3() {
 void programa4() {
   Serial.println("Programa 4 -- Wally");
   while (1 == 1) {
-    if (!(digitalRead(35) & !digitalRead(36))) {
+    if (analogRead(35) < Umbral_IR & analogRead(36) < Umbral_IR) {
       Forward(200);
     }
-    if (digitalRead(35) & !digitalRead(36)) {
+    if (analogRead(35) > Umbral_IR & analogRead(36) < Umbral_IR) {
       Backward(200);
       delay(1*1000);
       TurnRight(200);
       delay(500);
     }
-    if (!digitalRead(35) & digitalRead(36)) {
+    if (analogRead(35) < Umbral_IR & analogRead(36) > Umbral_IR) {
       Backward(200);
       delay(1*1000);
       TurnLeft(200);
       delay(500);
     }
-    if (digitalRead(35) & digitalRead(36)) {
+    if (analogRead(35) > Umbral_IR & analogRead(36) > Umbral_IR) {
       Backward(200);
       delay(1*1000);
       TurnRight(200);
@@ -173,24 +174,24 @@ void programa4() {
 void programa5() {
   Serial.println("Programa 5 -- Pato");
   while (1 == 1) {
-    if (!(digitalRead(35) & !digitalRead(36))) {
+    if (analogRead(35) < Umbral_IR & analogRead(36) < Umbral_IR) {
       digitalWrite(23, LOW);
-      digitalWrite(25, HIGH);
+      digitalWrite(25, LOW);
       Stop();
     }
-    if (digitalRead(35) & !digitalRead(36)) {
+    if (analogRead(35) > Umbral_IR & analogRead(36) < Umbral_IR) {
       digitalWrite(23, HIGH);
       digitalWrite(25, LOW);
       TurnLeft(255);
     }
-    if (!digitalRead(35) & digitalRead(36)) {
-      digitalWrite(23, HIGH);
-      digitalWrite(25, LOW);
+    if (analogRead(35) < Umbral_IR & analogRead(36) > Umbral_IR) {
+      digitalWrite(23, LOW);
+      digitalWrite(25, HIGH);
       TurnRight(255);
     }
-    if (digitalRead(35) & digitalRead(36)) {
+    if (analogRead(35) > Umbral_IR & analogRead(36) > Umbral_IR) {
       digitalWrite(23, HIGH);
-      digitalWrite(25, LOW);
+      digitalWrite(25, HIGH);
       Forward(255);
     }
   }
@@ -199,7 +200,7 @@ void programa5() {
 void programa8() {
   Serial.println("Programa 8 -- Mando con llave infrarrojo");
   while (1 == 1) {
-    if (digitalRead(35)) {
+    if (analogRead(35) > Umbral_IR) {
       remote_button = irrecv1.mrtRemoteLoop();
       if ((irrecv1.mrtRemoteStateCheck(remote_button,44))) {
         Forward(255);
@@ -246,7 +247,7 @@ void programa9() {
     if ((irrecv1.mrtRemoteStateCheck(remote_button,53))) {
       setDcMotor(MOTOR_L1,0,0);
     }
-    if (digitalRead(35)) {
+    if (analogRead(35) > Umbral_IR) {
       digitalWrite(23, HIGH);
       ledcWriteTone(4,493);
        delay(125);
@@ -266,25 +267,25 @@ void programa9() {
 void programa6() {
   Serial.println("Programa 6 -- Boxeador");
   while (1 == 1) {
-    if (!(digitalRead(35) & !digitalRead(36))) {
+    if (analogRead(35) < Umbral_IR & analogRead(36) < Umbral_IR) {
       Backward(255);
       delay(1*1000);
       TurnRight(255);
       delay(500);
     }
-    if (digitalRead(35) & !digitalRead(36)) {
+    if (analogRead(35) > Umbral_IR & analogRead(36) < Umbral_IR) {
       Backward(255);
       delay(1*1000);
       TurnRight(255);
       delay(500);
     }
-    if (!digitalRead(35) & digitalRead(36)) {
+    if (analogRead(35) < Umbral_IR & analogRead(36) > Umbral_IR) {
       Backward(255);
       delay(1*1000);
       TurnLeft(255);
       delay(500);
     }
-    if (digitalRead(35) & digitalRead(36)) {
+    if (analogRead(35) > Umbral_IR & analogRead(36) > Umbral_IR) {
       Forward(255);
     }
   }
@@ -295,17 +296,17 @@ void programa10() {
   while (1 == 1) {
     digitalWrite(23, HIGH);
     digitalWrite(25, LOW);
-    delay(1*1000);
+    delay(1000);
     digitalWrite(23, LOW);
     digitalWrite(25, HIGH);
-    delay(1*1000);
+    delay(1000);
   }
 }
 
 void programa11() {
   Serial.println("Programa 11 -- Banco");
   while (1 == 1) {
-    if (!digitalRead(39)) {
+    if (digitalRead(39) > 400) {
       digitalWrite(23, HIGH);
       digitalWrite(25, HIGH);
       Forward(255);
@@ -324,7 +325,7 @@ void programa12() {
       ledcWriteTone(4,261);
        delay(500);
     } else {
-      if (digitalRead(35) & digitalRead(36)) {
+      if (analogRead(35) > Umbral_IR & analogRead(36) > Umbral_IR) {
         ledcWriteTone(4,293);
          delay(500);
       } else {
@@ -336,15 +337,15 @@ void programa12() {
           ledcWriteTone(4,349);
            delay(500);
         }
-        if (digitalRead(35)) {
+        if (analogRead(35) > 400) {
           ledcWriteTone(4,392);
            delay(500);
         }
-        if (digitalRead(36)) {
+        if (analogRead(36) > 400) {
           ledcWriteTone(4,440);
            delay(500);
         }
-        if (!digitalRead(39)) {
+        if (digitalRead(39) > 400) {
           ledcWriteTone(4,493);
            delay(500);
         }
@@ -358,6 +359,22 @@ void programa12() {
 void setup() {
   Serial.begin(115200);
 
+  Serial.begin(115200);
+delay(2000);
+WiFi.mode(WIFI_AP);
+Serial.println("Conectando como modo punto de acceso");
+while (!WiFi.softAP(wifi_ssid,wifi_pass)){
+  Serial.print(".");
+  delay(500);
+  }
+Serial.println("ESP MAC Address:  ");
+Serial.println(WiFi.macAddress());
+Serial.println();
+Serial.print("Iniciado Access point:  ");
+Serial.println(wifi_ssid);
+Serial.print("with this IP address: ");
+Serial.println(WiFi.softAPIP());
+
   server.on("/move",HTTP_GET,serveinicio);
   pinMode(0,INPUT_PULLUP);
   ledcSetup(4,5000,8);
@@ -366,29 +383,14 @@ ledcAttachPin(32,4);
     Programa = 0;
   tiempo = millis()/1000;
   Serial.println("Arrancando programa");
-  Serial.begin(115200);
-  delay(2000);
-  WiFi.mode(WIFI_AP);
-  Serial.println("Conectando como modo punto de acceso");
-  while (!WiFi.softAP(wifi_ssid,wifi_pass)){
-    Serial.print(".");
-    delay(500);
-    }
-  Serial.println("ESP MAC Address:  ");
-  Serial.println(WiFi.macAddress());
-  Serial.println();
-  Serial.print("Iniciado Access point:  ");
-  Serial.println(wifi_ssid);
-  Serial.print("with this IP address: ");
-  Serial.println(WiFi.softAPIP());
   AsyncElegantOTA.begin(&server); //Start ElegantOTA
   server.begin();
   irrecv1.enableIRIn();
   recommon_flag = 1;
 
   DcMotor_init();
-  pinMode(35,INPUT);
-  pinMode(36,INPUT);
+  analogReadResolution(10);
+
   pinMode(23, OUTPUT);
   pinMode(25, OUTPUT);
   pinMode(33,INPUT);
