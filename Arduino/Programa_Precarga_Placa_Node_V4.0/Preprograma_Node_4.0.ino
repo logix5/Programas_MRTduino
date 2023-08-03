@@ -10,12 +10,23 @@
 
 #include "MRT_esp32_Motor.h"
 
+#include <PlayRtttl.hpp>
 
+
+const unsigned int Umbral_IR_MCoche = 200;
+const unsigned int Umbral_IR_Piano = 200;
+const unsigned int Umbral_IR_Diana = 200;
+const unsigned int Umbral_IR_Boxeador = 200;
+const unsigned int Umbral_IR_Tren = 200;
+const unsigned int Umbral_IR_Wally = 50;
+const unsigned int Umbral_IR_Pato = 300;
+unsigned int melodia = 1;
 int Programa = 0;
 float tiempo = 0;
-unsigned int Umbral_IR = 400;
-const char wifi_ssid[]="Otto_Wifi";
-const char wifi_pass[]="otto1234";
+unsigned int LecturaIRIzq = 0;
+unsigned int LecturaIrDrcho = 0;
+const char wifi_ssid[]="Logix5_AP";
+const char wifi_pass[]="node1234";
 
 AsyncWebServer server(80);
 
@@ -60,6 +71,14 @@ String cadena=(String) R"=====(
  return cadena;
 }
 
+double random_int(int a,int b) {
+  if (a > b) {
+    int c = a;
+    a = b;
+    b = c;
+  }
+  return (double) random(a,b+1);
+}
 
 void Forward(unsigned int speed) {
   setDcMotor(MOTOR_L1,0,speed);
@@ -76,31 +95,37 @@ void Backward(unsigned int speed) {
   setDcMotor(MOTOR_R1,1,speed);
 }
 
-void TurnLeft(unsigned int speed) {
-  setDcMotor(MOTOR_L1,1,speed);
-  setDcMotor(MOTOR_R1,0,speed);
-}
-
 void Stop() {
   setDcMotor(MOTOR_L1,0,0);
   setDcMotor(MOTOR_R1,0,0);
 }
 
+void TurnLeft(unsigned int speed) {
+  setDcMotor(MOTOR_L1,1,speed);
+  setDcMotor(MOTOR_R1,0,speed);
+}
+
 void programa1() {
-  Serial.println("Programa 1 -- Movimiento motores -- Gimnasta");
+  Serial.println("Programa 1 -- Movimiento motor -- Gimnasta");
   while (1 == 1) {
-    setDcMotor(MOTOR_L1,0,255);
-    setDcMotor(MOTOR_R1,0,255);
+    // Con este valor va bien, si es verdad que con los dos portapilas directos va más deprisa
+    setDcMotor(MOTOR_L1,0,225);
     delay(2*1000);
-    setDcMotor(MOTOR_L1,1,255);
-    setDcMotor(MOTOR_R1,1,255);
+    setDcMotor(MOTOR_L1,0,0);
+    delay(100);
+    setDcMotor(MOTOR_L1,1,225);
     delay(2*1000);
+    setDcMotor(MOTOR_L1,0,0);
+    delay(100);
+    // Con este valor las pilas si van justas no se moverá
     setDcMotor(MOTOR_L1,0,200);
-    setDcMotor(MOTOR_R1,0,200);
     delay(2*1000);
+    setDcMotor(MOTOR_L1,0,0);
+    delay(100);
     setDcMotor(MOTOR_L1,1,200);
-    setDcMotor(MOTOR_R1,1,200);
     delay(2*1000);
+    setDcMotor(MOTOR_L1,0,0);
+    delay(100);
   }
 }
 
@@ -109,16 +134,16 @@ void programa2() {
   while (1 == 1) {
     remote_button = irrecv1.mrtRemoteLoop();
     if ((irrecv1.mrtRemoteStateCheck(remote_button,44))) {
-      Forward(255);
+      Forward(240);
     }
     if ((irrecv1.mrtRemoteStateCheck(remote_button,62))) {
-      Backward(255);
+      Backward(240);
     }
     if ((irrecv1.mrtRemoteStateCheck(remote_button,63))) {
-      TurnLeft(255);
+      TurnLeft(240);
     }
     if ((irrecv1.mrtRemoteStateCheck(remote_button,61))) {
-      TurnRight(255);
+      TurnRight(240);
     }
     if ((irrecv1.mrtRemoteStateCheck(remote_button,53))) {
       Stop();
@@ -129,44 +154,46 @@ void programa2() {
 void programa3() {
   Serial.println("Programa 3 -- Tren");
   while (1 == 1) {
-    if (analogRead(35) < Umbral_IR & analogRead(36) < Umbral_IR) {
-      Forward(255);
+    LecturaIRIzq = analogRead(35);
+    LecturaIrDrcho = analogRead(36);
+    if (LecturaIRIzq < Umbral_IR_Tren & LecturaIrDrcho < Umbral_IR_Tren) {
+      Forward(200);
     }
-    if (analogRead(35) > Umbral_IR & analogRead(36) < Umbral_IR) {
-      TurnRight(255);
+    if (LecturaIRIzq > Umbral_IR_Tren & LecturaIrDrcho < Umbral_IR_Tren) {
+      TurnRight(200);
     }
-    if (analogRead(35) < Umbral_IR & analogRead(36) > Umbral_IR) {
-      TurnLeft(255);
+    if (LecturaIRIzq < Umbral_IR_Tren & LecturaIrDrcho > Umbral_IR_Tren) {
+      TurnLeft(200);
     }
-    if (analogRead(35) > Umbral_IR & analogRead(36) > Umbral_IR) {
-      TurnRight(255);
+    if (LecturaIRIzq > Umbral_IR_Tren & LecturaIrDrcho > Umbral_IR_Tren) {
+      TurnRight(200);
     }
   }
 }
 
 void programa4() {
   Serial.println("Programa 4 -- Wally");
+  Forward(200);
   while (1 == 1) {
-    if (analogRead(35) < Umbral_IR & analogRead(36) < Umbral_IR) {
-      Forward(200);
-    }
-    if (analogRead(35) > Umbral_IR & analogRead(36) < Umbral_IR) {
+    LecturaIRIzq = analogRead(35);
+    LecturaIrDrcho = analogRead(36);
+    if (LecturaIRIzq > Umbral_IR_Wally) {
+      Stop();
+      delay(50);
       Backward(200);
       delay(1*1000);
       TurnRight(200);
-      delay(500);
+      delay(1*1000);
+      Forward(200);
     }
-    if (analogRead(35) < Umbral_IR & analogRead(36) > Umbral_IR) {
+    if (LecturaIrDrcho > Umbral_IR_Wally) {
+      Stop();
+      delay(50);
       Backward(200);
       delay(1*1000);
       TurnLeft(200);
-      delay(500);
-    }
-    if (analogRead(35) > Umbral_IR & analogRead(36) > Umbral_IR) {
-      Backward(200);
       delay(1*1000);
-      TurnRight(200);
-      delay(500);
+      Forward(200);
     }
   }
 }
@@ -174,49 +201,17 @@ void programa4() {
 void programa5() {
   Serial.println("Programa 5 -- Pato");
   while (1 == 1) {
-    if (analogRead(35) < Umbral_IR & analogRead(36) < Umbral_IR) {
-      digitalWrite(23, LOW);
-      digitalWrite(25, LOW);
-      Stop();
+    LecturaIRIzq = analogRead(35);
+    LecturaIrDrcho = analogRead(36);
+    if (LecturaIRIzq > Umbral_IR_Pato) {
+      setDcMotor(MOTOR_R1,0,240);
+    } else {
+      setDcMotor(MOTOR_R1,0,0);
     }
-    if (analogRead(35) > Umbral_IR & analogRead(36) < Umbral_IR) {
-      digitalWrite(23, HIGH);
-      digitalWrite(25, LOW);
-      TurnLeft(255);
-    }
-    if (analogRead(35) < Umbral_IR & analogRead(36) > Umbral_IR) {
-      digitalWrite(23, LOW);
-      digitalWrite(25, HIGH);
-      TurnRight(255);
-    }
-    if (analogRead(35) > Umbral_IR & analogRead(36) > Umbral_IR) {
-      digitalWrite(23, HIGH);
-      digitalWrite(25, HIGH);
-      Forward(255);
-    }
-  }
-}
-
-void programa8() {
-  Serial.println("Programa 8 -- Mando con llave infrarrojo");
-  while (1 == 1) {
-    if (analogRead(35) > Umbral_IR) {
-      remote_button = irrecv1.mrtRemoteLoop();
-      if ((irrecv1.mrtRemoteStateCheck(remote_button,44))) {
-        Forward(255);
-      }
-      if ((irrecv1.mrtRemoteStateCheck(remote_button,62))) {
-        Backward(255);
-      }
-      if ((irrecv1.mrtRemoteStateCheck(remote_button,63))) {
-        TurnLeft(255);
-      }
-      if ((irrecv1.mrtRemoteStateCheck(remote_button,61))) {
-        TurnRight(255);
-      }
-      if ((irrecv1.mrtRemoteStateCheck(remote_button,53))) {
-        Stop();
-      }
+    if (LecturaIrDrcho > Umbral_IR_Pato) {
+      setDcMotor(MOTOR_L1,0,240);
+    } else {
+      setDcMotor(MOTOR_L1,0,0);
     }
   }
 }
@@ -224,7 +219,7 @@ void programa8() {
 void programa7() {
   Serial.println("Programa 7 -- Peonza");
   while (1 == 1) {
-    if (digitalRead(33)) {
+    if ((!digitalRead(33))) {
       digitalWrite(23, HIGH);
       Forward(255);
     } else {
@@ -234,59 +229,135 @@ void programa7() {
   }
 }
 
-void programa9() {
-  Serial.println("Programa 9 --Diana");
+void programa12() {
+  Serial.println("Programa 12 -- Guitarra");
   while (1 == 1) {
-    remote_button = irrecv1.mrtRemoteLoop();
-    if ((irrecv1.mrtRemoteStateCheck(remote_button,63))) {
-      setDcMotor(MOTOR_L1,0,250);
-    }
-    if ((irrecv1.mrtRemoteStateCheck(remote_button,61))) {
-      setDcMotor(MOTOR_L1,1,250);
-    }
-    if ((irrecv1.mrtRemoteStateCheck(remote_button,53))) {
-      setDcMotor(MOTOR_L1,0,0);
-    }
-    if (analogRead(35) > Umbral_IR) {
-      digitalWrite(23, HIGH);
+    if ((!digitalRead(33)) & (!digitalRead(34))) {
       ledcWriteTone(4,493);
-       delay(125);
-      ledcWriteTone(4,261);
-       delay(125);
-      ledcWriteTone(4,440);
-       delay(125);
-      ledcWriteTone(4,293);
-       delay(125);
-      ledcWriteTone(4,0);
-      delay(5*1000);
-      digitalWrite(23, LOW);
+       delay(500);
+    } else {
+      if (analogRead(35) > Umbral_IR_Piano & analogRead(36) > Umbral_IR_Piano) {
+        ledcWriteTone(4,440);
+         delay(500);
+      } else {
+        if ((!digitalRead(33))) {
+          ledcWriteTone(4,329);
+           delay(500);
+        }
+        if ((!digitalRead(34))) {
+          ledcWriteTone(4,349);
+           delay(500);
+        }
+        if (analogRead(35) > 400) {
+          ledcWriteTone(4,261);
+           delay(500);
+        }
+        if (analogRead(36) > 400) {
+          ledcWriteTone(4,293);
+           delay(500);
+        }
+        if (analogRead(39) < 400) {
+          ledcWriteTone(4,392);
+           delay(500);
+        }
+        if (!digitalRead(0)) {
+          playRtttlBlocking(32,(char*)StarWars);
+        }
+      }
     }
+    ledcWriteTone(4,0);
   }
 }
 
 void programa6() {
-  Serial.println("Programa 6 -- Boxeador");
+  Serial.println("Programa 6 -- Sumo");
   while (1 == 1) {
-    if (analogRead(35) < Umbral_IR & analogRead(36) < Umbral_IR) {
-      Backward(255);
-      delay(1*1000);
-      TurnRight(255);
+    LecturaIRIzq = analogRead(35);
+    LecturaIrDrcho = analogRead(36);
+    if (LecturaIRIzq < Umbral_IR_Boxeador & LecturaIrDrcho < Umbral_IR_Boxeador) {
+      Stop();
+      delay(100);
+      Backward(180);
+      delay(500);
+      TurnRight(180);
       delay(500);
     }
-    if (analogRead(35) > Umbral_IR & analogRead(36) < Umbral_IR) {
-      Backward(255);
-      delay(1*1000);
-      TurnRight(255);
+    if (LecturaIRIzq > Umbral_IR_Boxeador & LecturaIrDrcho < Umbral_IR_Boxeador) {
+      Stop();
+      delay(100);
+      Backward(180);
+      delay(500);
+      TurnRight(180);
       delay(500);
     }
-    if (analogRead(35) < Umbral_IR & analogRead(36) > Umbral_IR) {
-      Backward(255);
-      delay(1*1000);
-      TurnLeft(255);
+    if (LecturaIRIzq < Umbral_IR_Boxeador & LecturaIrDrcho > Umbral_IR_Boxeador) {
+      Stop();
+      delay(100);
+      Backward(180);
+      delay(500);
+      TurnLeft(180);
       delay(500);
     }
-    if (analogRead(35) > Umbral_IR & analogRead(36) > Umbral_IR) {
-      Forward(255);
+    if (LecturaIRIzq > Umbral_IR_Boxeador & LecturaIrDrcho > Umbral_IR_Boxeador) {
+      Forward(180);
+    }
+  }
+}
+
+void programa8() {
+  Serial.println("Programa 8 -- Mando con llave infrarrojo");
+  while (1 == 1) {
+    remote_button = irrecv1.mrtRemoteLoop();
+    if (analogRead(35) > Umbral_IR_MCoche) {
+      if ((irrecv1.mrtRemoteStateCheck(remote_button,44))) {
+        Forward(240);
+      }
+      if ((irrecv1.mrtRemoteStateCheck(remote_button,62))) {
+        Backward(240);
+      }
+      if ((irrecv1.mrtRemoteStateCheck(remote_button,63))) {
+        TurnLeft(240);
+      }
+      if ((irrecv1.mrtRemoteStateCheck(remote_button,61))) {
+        TurnRight(240);
+      }
+      if ((irrecv1.mrtRemoteStateCheck(remote_button,53))) {
+        Stop();
+      }
+    }
+  }
+}
+
+void programa9() {
+  Serial.println("Programa 9 --Diana");
+  setDcMotor(MOTOR_L1,0,200);
+  while (1 == 1) {
+    if (analogRead(35) > Umbral_IR_Diana) {
+      setDcMotor(MOTOR_L1,0,0);
+      digitalWrite(23, HIGH);
+      melodia = random_int(1, 6);
+      switch (melodia) {
+      case 1:
+        playRtttlBlocking(32,(char*)Muppets);
+        break;
+       case 2:
+        playRtttlBlocking(32,(char*)Indiana);
+        break;
+       case 3:
+        playRtttlBlocking(32,(char*)A_Team);
+        break;
+       case 4:
+        playRtttlBlocking(32,(char*)Looney);
+        break;
+       case 5:
+        playRtttlBlocking(32,(char*)Gadget);
+        break;
+       default :
+        playRtttlBlocking(32,(char*)_20thCenFox);
+       }
+      ledcWriteTone(4,0);
+      digitalWrite(23, LOW);
+      setDcMotor(MOTOR_L1,0,200);
     }
   }
 }
@@ -306,52 +377,15 @@ void programa10() {
 void programa11() {
   Serial.println("Programa 11 -- Banco");
   while (1 == 1) {
-    if (digitalRead(39) > 400) {
+    if (analogRead(39) < 400) {
       digitalWrite(23, HIGH);
       digitalWrite(25, HIGH);
-      Forward(255);
+      Forward(225);
     } else {
       digitalWrite(23, LOW);
       digitalWrite(25, LOW);
       Stop();
     }
-  }
-}
-
-void programa12() {
-  Serial.println("Programa 12 -- Piano");
-  while (1 == 1) {
-    if (digitalRead(33) & digitalRead(34)) {
-      ledcWriteTone(4,261);
-       delay(500);
-    } else {
-      if (analogRead(35) > Umbral_IR & analogRead(36) > Umbral_IR) {
-        ledcWriteTone(4,293);
-         delay(500);
-      } else {
-        if (digitalRead(33)) {
-          ledcWriteTone(4,329);
-           delay(500);
-        }
-        if (digitalRead(34)) {
-          ledcWriteTone(4,349);
-           delay(500);
-        }
-        if (analogRead(35) > 400) {
-          ledcWriteTone(4,392);
-           delay(500);
-        }
-        if (analogRead(36) > 400) {
-          ledcWriteTone(4,440);
-           delay(500);
-        }
-        if (digitalRead(39) > 400) {
-          ledcWriteTone(4,493);
-           delay(500);
-        }
-      }
-    }
-    ledcWriteTone(4,0);
   }
 }
 
@@ -391,11 +425,10 @@ ledcAttachPin(32,4);
   DcMotor_init();
   analogReadResolution(10);
 
-  pinMode(23, OUTPUT);
-  pinMode(25, OUTPUT);
   pinMode(33,INPUT);
-  pinMode(39,INPUT);
+  pinMode(23, OUTPUT);
   pinMode(34,INPUT);
+  pinMode(25, OUTPUT);
 }
 
 void loop() {

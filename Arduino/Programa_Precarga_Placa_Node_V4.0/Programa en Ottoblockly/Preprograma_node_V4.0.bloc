@@ -1,0 +1,3225 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all-mrtnode</toolbox>
+  <block type="base_setup_loop" id="A)uQX^7FjCp@aALm3o1J" x="-985" y="-519">
+    <statement name="DO">
+      <block type="variables_const" id="C{~TE$YLfBj35#GmFRN+">
+        <field name="VAR">Umbral_IR_MCoche</field>
+        <field name="VARIABLE_SETTYPE_TYPE">UNUMBER</field>
+        <value name="VAL_CONST">
+          <block type="math_number" id=")ju=J81)),.o_[tiMF,y">
+            <field name="NUM">200</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_const" id="KdfQOW?8;fR!!#|r.$Gx">
+            <field name="VAR">Umbral_IR_Piano</field>
+            <field name="VARIABLE_SETTYPE_TYPE">UNUMBER</field>
+            <value name="VAL_CONST">
+              <block type="math_number" id="?@1_nJs4RaV;dc.NEXmc">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_const" id="V@2~%-,4Qt:Xcbhj`{hD">
+                <field name="VAR">Umbral_IR_Diana</field>
+                <field name="VARIABLE_SETTYPE_TYPE">UNUMBER</field>
+                <value name="VAL_CONST">
+                  <block type="math_number" id="Y-3^wyuqp)XTNg4NfqKa">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_const" id="gNp1!boqeKLIJG[2?EGg">
+                    <field name="VAR">Umbral_IR_Boxeador</field>
+                    <field name="VARIABLE_SETTYPE_TYPE">UNUMBER</field>
+                    <value name="VAL_CONST">
+                      <block type="math_number" id="7:NL);)veiKTYzn2#Y%~">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_const" id="HxWsWXkC-m.]ubQS^/yL">
+                        <field name="VAR">Umbral_IR_Tren</field>
+                        <field name="VARIABLE_SETTYPE_TYPE">UNUMBER</field>
+                        <value name="VAL_CONST">
+                          <block type="math_number" id="nctriZPd$J0`_oc$}2nM">
+                            <field name="NUM">200</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_const" id="3tZB,]t~]0L6I;l$D}1[">
+                            <field name="VAR">Umbral_IR_Wally</field>
+                            <field name="VARIABLE_SETTYPE_TYPE">UNUMBER</field>
+                            <value name="VAL_CONST">
+                              <block type="math_number" id="}cVW#I,o~up6YBn!WTb_">
+                                <field name="NUM">50</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_const" id="^wC.H%4k}m0EoADq1]G$">
+                                <field name="VAR">Umbral_IR_Pato</field>
+                                <field name="VARIABLE_SETTYPE_TYPE">UNUMBER</field>
+                                <value name="VAL_CONST">
+                                  <block type="math_number" id="QiH_K3I3h23]8;E{:Q*v">
+                                    <field name="NUM">300</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="variables_set_init" id="},4%jf*4ldwx.VF^f`jw">
+                                    <field name="VAR">melodia</field>
+                                    <field name="VARIABLE_SETTYPE_TYPE">UNUMBER</field>
+                                    <value name="VALUE">
+                                      <block type="math_number" id="P5=]YX{jl5hBQh}}OvBG">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set_init" id="LlfZhIlK*ffa[WF!^zC8">
+                                        <field name="VAR">Programa</field>
+                                        <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+                                        <value name="VALUE">
+                                          <block type="math_number" id="/M+^:Z.kVvhGWF#zyG|n">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="variables_set_init" id="]ZX2Had%p+k0!#Ypg|h%">
+                                            <field name="VAR">tiempo</field>
+                                            <field name="VARIABLE_SETTYPE_TYPE">DECIMAL</field>
+                                            <value name="VALUE">
+                                              <block type="math_number" id="9X^Z)OD^Diz.va,d4iX?">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="variables_set_init" id="kPFJU{AH28H?s6vV@YBG">
+                                                <field name="VAR">LecturaIRIzq</field>
+                                                <field name="VARIABLE_SETTYPE_TYPE">UNUMBER</field>
+                                                <value name="VALUE">
+                                                  <block type="math_number" id="iEMI}1HkWhOT,B4.N#sw">
+                                                    <field name="NUM">0</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="variables_set_init" id=")t]1nNzcK7(3SxNprFPl">
+                                                    <field name="VAR">LecturaIrDrcho</field>
+                                                    <field name="VARIABLE_SETTYPE_TYPE">UNUMBER</field>
+                                                    <value name="VALUE">
+                                                      <block type="math_number" id="Mh2*}xKRC#3[D.)M%T*x">
+                                                        <field name="NUM">0</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="variables_set" id="MUvnZyb5WaTEonaw,iIH">
+                                                        <field name="VAR">Programa</field>
+                                                        <value name="VALUE">
+                                                          <block type="math_number" id="jY+dvpRHP::+-*IlPoQG">
+                                                            <field name="NUM">0</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="variables_set" id="=/qA2HUso%,BZIH.%1PJ">
+                                                            <field name="VAR">tiempo</field>
+                                                            <value name="VALUE">
+                                                              <block type="millis" id="cM6H3w^;UoI;w^Ow,q62">
+                                                                <field name="unite">s</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="serial_println" id="svLt5-XT0,$F2k?$jBBc">
+                                                                <value name="CONTENT">
+                                                                  <shadow type="text" id="Clv~U6p(FEqbX6bL6Ni+">
+                                                                    <field name="TEXT">Arrancando programa</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="serial_init" id="V#bADluv/pRxi0n?x(R+">
+                                                                    <field name="PINBAUDIOS">115200</field>
+                                                                    <next>
+                                                                      <block type="wifi_init_ap" id="=`-sN{dm^uEZ|9[!(0u@">
+                                                                        <field name="LOGIC">TRUE</field>
+                                                                        <field name="SSID">Logix5_AP</field>
+                                                                        <field name="PASSWORD">node1234</field>
+                                                                        <next>
+                                                                          <block type="wifiserver_port_asyn_library" id="WT}%TQI]Ajn`G{k{bx!B">
+                                                                            <value name="server_port">
+                                                                              <shadow type="math_number" id=")e{oW1y6f`=[~,#?E`m%">
+                                                                                <field name="NUM">80</field>
+                                                                              </shadow>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="esp8266_asynsend" id="=B%]7~m3,[eh1a{pz9@w">
+                                                                                <field name="address">move</field>
+                                                                                <field name="text">inicio</field>
+                                                                                <statement name="ORDERS">
+                                                                                  <block type="esp8266_asyngetArg" id="L(XeOrSSc~6:LQm{Hl$K">
+                                                                                    <field name="arg">dir</field>
+                                                                                    <next>
+                                                                                      <block type="serial_println" id="v9%twznWzn]{En#f:Dq=">
+                                                                                        <value name="CONTENT">
+                                                                                          <shadow type="text" id="4[#`PX^a7eLL|F9+Z-_i">
+                                                                                            <field name="TEXT">text</field>
+                                                                                          </shadow>
+                                                                                          <block type="esp8266_asynuseArg" id="qLoy|Orn%C}{nk.6Zsy2">
+                                                                                            <field name="arg">dir</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="controls_if" id="h4$gN1GY,Wm]TK|y3*@6">
+                                                                                            <value name="IF0">
+                                                                                              <block type="logic_compare" id="jpiz85x1vKW4^7rN^jh?">
+                                                                                                <field name="OP">EQ</field>
+                                                                                                <value name="A">
+                                                                                                  <block type="esp8266_asynuseArg" id="hm/zF4|uAaRNh}$0i:E!">
+                                                                                                    <field name="arg">dir</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="B">
+                                                                                                  <shadow type="math_number" id="eGQgwC})sL^?}RE3Z~w;">
+                                                                                                    <field name="NUM">10</field>
+                                                                                                  </shadow>
+                                                                                                  <block type="text" id="6ozra]rW?i!Gp;)kNz[R">
+                                                                                                    <field name="TEXT">F</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <statement name="DO0">
+                                                                                              <block type="procedures_callnoreturn" id="^Nc(bzDZk:vAqG5CASti">
+                                                                                                <mutation name="Forward">
+                                                                                                  <arg name="speed"></arg>
+                                                                                                </mutation>
+                                                                                                <value name="ARG0">
+                                                                                                  <block type="math_number" id="/o^I:dA_ALSg6W%ls+kb">
+                                                                                                    <field name="NUM">255</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </statement>
+                                                                                            <next>
+                                                                                              <block type="controls_if" id="LpU]l:j{:!Pc-aTx`v$b">
+                                                                                                <value name="IF0">
+                                                                                                  <block type="logic_compare" id="I}*a=,N`0qjP`J|Ui9N*">
+                                                                                                    <field name="OP">EQ</field>
+                                                                                                    <value name="A">
+                                                                                                      <block type="esp8266_asynuseArg" id="N+?d08-~wAeqAi05Fi7Z">
+                                                                                                        <field name="arg">dir</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="B">
+                                                                                                      <shadow type="math_number" id="eGQgwC})sL^?}RE3Z~w;">
+                                                                                                        <field name="NUM">10</field>
+                                                                                                      </shadow>
+                                                                                                      <block type="text" id="S=)Mvh@6mwiVkdf[bn$y">
+                                                                                                        <field name="TEXT">B</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <statement name="DO0">
+                                                                                                  <block type="procedures_callnoreturn" id="pTi-DG0`kfpRVz^@7`OH">
+                                                                                                    <mutation name="Backward">
+                                                                                                      <arg name="speed"></arg>
+                                                                                                    </mutation>
+                                                                                                    <value name="ARG0">
+                                                                                                      <block type="math_number" id=")fsl+RbLecW]]cVy)~-F">
+                                                                                                        <field name="NUM">255</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </statement>
+                                                                                                <next>
+                                                                                                  <block type="controls_if" id="qf$-TCYaJNHgl^]n;59j">
+                                                                                                    <value name="IF0">
+                                                                                                      <block type="logic_compare" id="g{r$Xhh0}u}u2M{H[rrk">
+                                                                                                        <field name="OP">EQ</field>
+                                                                                                        <value name="A">
+                                                                                                          <block type="esp8266_asynuseArg" id="c9Gy(nY_Kl7#U05DmJ+R">
+                                                                                                            <field name="arg">dir</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="B">
+                                                                                                          <shadow type="math_number" id="eGQgwC})sL^?}RE3Z~w;">
+                                                                                                            <field name="NUM">10</field>
+                                                                                                          </shadow>
+                                                                                                          <block type="text" id="04m+Y+A^2+P}a6;d+@;f">
+                                                                                                            <field name="TEXT">R</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <statement name="DO0">
+                                                                                                      <block type="procedures_callnoreturn" id="MM.Ot9c39Uv?re1vkk@u">
+                                                                                                        <mutation name="TurnRight">
+                                                                                                          <arg name="speed"></arg>
+                                                                                                        </mutation>
+                                                                                                        <value name="ARG0">
+                                                                                                          <block type="math_number" id="2$6xLK]%PvN4oVavb15W">
+                                                                                                            <field name="NUM">255</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                      </block>
+                                                                                                    </statement>
+                                                                                                    <next>
+                                                                                                      <block type="controls_if" id="*FnKAn%fot.GC74VNp@a">
+                                                                                                        <value name="IF0">
+                                                                                                          <block type="logic_compare" id="[Y~twJk]+%+Sk;|lLBF6">
+                                                                                                            <field name="OP">EQ</field>
+                                                                                                            <value name="A">
+                                                                                                              <block type="esp8266_asynuseArg" id="dEPRji$DH3doj$@AR+RW">
+                                                                                                                <field name="arg">dir</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <value name="B">
+                                                                                                              <shadow type="math_number" id="eGQgwC})sL^?}RE3Z~w;">
+                                                                                                                <field name="NUM">10</field>
+                                                                                                              </shadow>
+                                                                                                              <block type="text" id="!I|$9BUgPeW~}X_Eaxp,">
+                                                                                                                <field name="TEXT">L</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <statement name="DO0">
+                                                                                                          <block type="procedures_callnoreturn" id="7R?.PRyhOOf:8u-fg/IL">
+                                                                                                            <mutation name="TurnLeft">
+                                                                                                              <arg name="speed"></arg>
+                                                                                                            </mutation>
+                                                                                                            <value name="ARG0">
+                                                                                                              <block type="math_number" id="kUh$~YWtYtT:USF!f$*k">
+                                                                                                                <field name="NUM">255</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </statement>
+                                                                                                        <next>
+                                                                                                          <block type="controls_if" id="Js9Q-ol6v9V?JO8b~mQJ">
+                                                                                                            <value name="IF0">
+                                                                                                              <block type="logic_compare" id="-3yJd@X1-$+_D~{G*e=L">
+                                                                                                                <field name="OP">EQ</field>
+                                                                                                                <value name="A">
+                                                                                                                  <block type="esp8266_asynuseArg" id="HK2]W}=06AxX:9,3D]V$">
+                                                                                                                    <field name="arg">dir</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="B">
+                                                                                                                  <shadow type="math_number" id="eGQgwC})sL^?}RE3Z~w;">
+                                                                                                                    <field name="NUM">10</field>
+                                                                                                                  </shadow>
+                                                                                                                  <block type="text" id="(jit{KcZhw3-=X$Rg]6F">
+                                                                                                                    <field name="TEXT">S</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <statement name="DO0">
+                                                                                                              <block type="procedures_callnoreturn" id="M13KM(^QyZ)*bkls)zLU">
+                                                                                                                <mutation name="Stop"></mutation>
+                                                                                                              </block>
+                                                                                                            </statement>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <next>
+                                                                                  <block type="Init_remotecontrolMRTNodeIL" id="}E+?l/wXX2m_ii/r4ltc">
+                                                                                    <field name="PIN_IR">27</field>
+                                                                                    <field name="CHANNEL">1</field>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="controls_if" id="hNBM^CQzQl:Kd)Pc+?`t">
+        <value name="IF0">
+          <block type="MRTNode_button" id="ZaD]v)AQBFpiR_19O:p?"></block>
+        </value>
+        <statement name="DO0">
+          <block type="variables_set" id="2SD6IbmcdIj}6YTxn/?y">
+            <field name="VAR">Programa</field>
+            <value name="VALUE">
+              <block type="math_arithmetic" id="Pum%yJPR{y!MxQ^I_K`}">
+                <field name="OP">ADD</field>
+                <value name="A">
+                  <block type="variables_get" id="d!yM$HEw8;9kc@26h6Hg">
+                    <field name="VAR">Programa</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="@DSP}Avv4KV.p7WW^gKP">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="serial_print" id="paYl;wKcIhYlGP]|mvnE">
+                <value name="CONTENT">
+                  <shadow type="text" id="_s+nt#u_FReJ1NCbc~S?">
+                    <field name="TEXT">Boton pulsado. Programa:  </field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="serial_println" id="Op!Ap7um`eJ5@2)=@-xU">
+                    <value name="CONTENT">
+                      <shadow type="text" id="0f(D.z38Vj)pnXp2LJS~">
+                        <field name="TEXT">Boton pulsado</field>
+                      </shadow>
+                      <block type="variables_get" id="r97$Wcu^lHklsJ94L4Oq">
+                        <field name="VAR">Programa</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_switch" id="`E}rXs+Aro~d54I6}jBw">
+                        <mutation casebreak="11" default="1"></mutation>
+                        <field name="SWVAR">Programa</field>
+                        <value name="CASE0">
+                          <block type="math_number" id="1p#_~m#040(^5kc%_6}~">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="play_esp32" id="{K$C{$=A+CSq(P/,Q2/)">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note">261</field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE1">
+                          <block type="math_number" id="J1+9t_U}@_O^|+Zr/ZKJ">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                        <statement name="DO1">
+                          <block type="play_esp32" id="w9|[{J396O~_)Ms*rRYN">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note">293</field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE2">
+                          <block type="math_number" id="T89p`11bdxL],bJ8tRwU">
+                            <field name="NUM">3</field>
+                          </block>
+                        </value>
+                        <statement name="DO2">
+                          <block type="play_esp32" id=".$kc9,{8:1OI;m.~UtK,">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note">329</field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE3">
+                          <block type="math_number" id="isNfKC2v)!@0.s+F*HvP">
+                            <field name="NUM">4</field>
+                          </block>
+                        </value>
+                        <statement name="DO3">
+                          <block type="play_esp32" id="vy%|qyzi)c[pE,!Z2V+-">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note">349</field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE4">
+                          <block type="math_number" id="#47GCwBN?{WYph(VSY?*">
+                            <field name="NUM">5</field>
+                          </block>
+                        </value>
+                        <statement name="DO4">
+                          <block type="play_esp32" id="R0CF9f7:8Q[@9^+28_we">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note">392</field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE5">
+                          <block type="math_number" id="l$e$J*d*;i$43)RYq!qy">
+                            <field name="NUM">6</field>
+                          </block>
+                        </value>
+                        <statement name="DO5">
+                          <block type="play_esp32" id="sIqql(tL`gyaw,YJ{6ix">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note">440</field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE6">
+                          <block type="math_number" id="M]+l6c_(1t6uAwQeVl)b">
+                            <field name="NUM">7</field>
+                          </block>
+                        </value>
+                        <statement name="DO6">
+                          <block type="play_esp32" id="2+7./?7#J--teIblrLHO">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note">493</field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE7">
+                          <block type="math_number" id="$3f6P(?E5D?tM(1g+.cU">
+                            <field name="NUM">8</field>
+                          </block>
+                        </value>
+                        <statement name="DO7">
+                          <block type="play_esp32" id="3EYZ%9(Y1,rE4v=m;RmX">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note">523 </field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE8">
+                          <block type="math_number" id="6?ltyFW=Xn@zUz4k8SL)">
+                            <field name="NUM">9</field>
+                          </block>
+                        </value>
+                        <statement name="DO8">
+                          <block type="play_esp32" id="]o!+S]$ur}*F+|O.l@fG">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note"> 587 </field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE9">
+                          <block type="math_number" id="Q.sc#n/ZkQjJe_jc6+Az">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <statement name="DO9">
+                          <block type="play_esp32" id="2;g)1Qt)v.FXr6[=IXFU">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note"> 659 </field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE10">
+                          <block type="math_number" id="(P5F$m7denj/2gR)bwK?">
+                            <field name="NUM">11</field>
+                          </block>
+                        </value>
+                        <statement name="DO10">
+                          <block type="play_esp32" id="AmX8gY,OR4!JV=F;3$pf">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note"> 698 </field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <value name="CASE11">
+                          <block type="math_number" id=")+^g^bM-QmZT8adhYAu2">
+                            <field name="NUM">12</field>
+                          </block>
+                        </value>
+                        <statement name="DO11">
+                          <block type="play_esp32" id="uGg,/UA2})0R2}7{S2ZQ">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note"> 784 </field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <statement name="DEFAULT">
+                          <block type="variables_set" id="F.Y$;+n/X,)QHadj`Agm">
+                            <field name="VAR">Programa</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="|D(c[3[-VQWV(}6*k)B_">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="notone_esp32" id="3hB_ir2pO/|P5O7_/=Gz">
+                            <field name="PIN_BUZZER">32</field>
+                            <next>
+                              <block type="variables_set" id="ILx=gjo]Td?}J)1R$^0o">
+                                <field name="VAR">tiempo</field>
+                                <value name="VALUE">
+                                  <block type="millis" id="fW@a+Ab!r=hhE`NiD~@a">
+                                    <field name="unite">s</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="oDLTSF$Ih%lnjGNP;EN~">
+            <value name="IF0">
+              <block type="logic_compare" id="ciKT,w?a5i/7_sqF.)a)">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="millis" id="j2[[F=))n`%lN+h?tFWm">
+                    <field name="unite">s</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="}lZ551#s)I0t8VO90o(|">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_arithmetic" id="B{Daj$jJv?*+N`0He:*D">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="variables_get" id="NT(FXR2PvW5r;r^~|p,$">
+                        <field name="VAR">tiempo</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="x2:zg%rLWJCa~*04aXX9">
+                        <field name="NUM">3</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_switch" id="[nUHzS%,H1|YE.+6hWnV">
+                <mutation casebreak="11" default="1"></mutation>
+                <field name="SWVAR">Programa</field>
+                <value name="CASE0">
+                  <block type="math_number" id="ywECLCDqtJ8PdpaL*37q">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="procedures_callnoreturn" id="@xxTDG2[td/VD7YA^O+#">
+                    <mutation name="programa1"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE1">
+                  <block type="math_number" id="S?3TKfqDBeV(%{EFWW1|">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="procedures_callnoreturn" id="Eg~95HDi4ZGIBX2WSxts">
+                    <mutation name="programa2"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE2">
+                  <block type="math_number" id="cn]n*U}y|Mo+XmMal*y9">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+                <statement name="DO2">
+                  <block type="procedures_callnoreturn" id="6fGrK1pyLjcq_2tpS1ys">
+                    <mutation name="programa3"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE3">
+                  <block type="math_number" id="f;3QZ]A)0%L3%EgzWDoy">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+                <statement name="DO3">
+                  <block type="procedures_callnoreturn" id="Fib.rV9Hgobw+S_BtY,3">
+                    <mutation name="programa4"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE4">
+                  <block type="math_number" id="fnwH_cTP/=VY;7.OI$X/">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
+                <statement name="DO4">
+                  <block type="procedures_callnoreturn" id="Rn]CH2yVosd!yn[IEA7M">
+                    <mutation name="programa5"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE5">
+                  <block type="math_number" id="B}!n7c@Q?3ULj[1O%wN3">
+                    <field name="NUM">6</field>
+                  </block>
+                </value>
+                <statement name="DO5">
+                  <block type="procedures_callnoreturn" id="48u.-RwH2CmF_JT!ETTX">
+                    <mutation name="programa6"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE6">
+                  <block type="math_number" id="+uqdsyOo)azr8*ATY-#E">
+                    <field name="NUM">7</field>
+                  </block>
+                </value>
+                <statement name="DO6">
+                  <block type="procedures_callnoreturn" id="kKLP#PTZYU~^P5`kW3rK">
+                    <mutation name="programa7"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE7">
+                  <block type="math_number" id="I=$6C4c~-*~6y,GmM0s3">
+                    <field name="NUM">8</field>
+                  </block>
+                </value>
+                <statement name="DO7">
+                  <block type="procedures_callnoreturn" id="Um8f|:;mJ}*r/;rQ{zhb">
+                    <mutation name="programa8"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE8">
+                  <block type="math_number" id="C0M]*jOlZ(IcY8H@2vEN">
+                    <field name="NUM">9</field>
+                  </block>
+                </value>
+                <statement name="DO8">
+                  <block type="procedures_callnoreturn" id="|#;vTZgRTna.JSTPq}a6">
+                    <mutation name="programa9"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE9">
+                  <block type="math_number" id="Onz{YQteFa:/{H#RERyT">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <statement name="DO9">
+                  <block type="procedures_callnoreturn" id="~uS_ftn5~m?|Re@(${KI">
+                    <mutation name="programa10"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE10">
+                  <block type="math_number" id="b6T;~mf{}h~OMdp}RI#?">
+                    <field name="NUM">11</field>
+                  </block>
+                </value>
+                <statement name="DO10">
+                  <block type="procedures_callnoreturn" id="zVi$07/T2Ur|8?Eyr}8x">
+                    <mutation name="programa11"></mutation>
+                  </block>
+                </statement>
+                <value name="CASE11">
+                  <block type="math_number" id="JI6]~iQ$p_Oc,$~28a2#">
+                    <field name="NUM">12</field>
+                  </block>
+                </value>
+                <statement name="DO11">
+                  <block type="procedures_callnoreturn" id="mGlz9[6$|s=mvZ1Uwdd+">
+                    <mutation name="programa12"></mutation>
+                  </block>
+                </statement>
+                <statement name="DEFAULT">
+                  <block type="serial_println" id="~RKJpq3.h-!g,JvA(i+7">
+                    <value name="CONTENT">
+                      <shadow type="text" id="GJi(%NA^=F+Z9[DyZV?l">
+                        <field name="TEXT">No se pulso ninguna tecla</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="variables_set" id=":la*-+4{T#KrxF#d?L*^">
+                    <field name="VAR">tiempo</field>
+                    <value name="VALUE">
+                      <block type="millis" id="efeA$Q0)m:2I!hNbKF^6">
+                        <field name="unite">s</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="AG^itm$v+RMSj0J9T{tS" x="-305" y="-516">
+    <mutation>
+      <arg name="speed" vartype="UNUMBER"></arg>
+    </mutation>
+    <field name="NAME">Forward</field>
+    <statement name="STACK">
+      <block type="motor_MRT_Node_run" id="R`neXrQ)^@tUupL41Y~b">
+        <field name="MOTOR_CON">MOTOR_L1</field>
+        <field name="MOTOR_DIR">0</field>
+        <value name="CONTENT">
+          <shadow type="math_number" id="seN8H5~1ruc:YiHwA?w6">
+            <field name="NUM">255</field>
+          </shadow>
+          <block type="variables_get" id="u.[!SLCBSZ$o}AVkO?HV">
+            <field name="VAR">speed</field>
+          </block>
+        </value>
+        <next>
+          <block type="motor_MRT_Node_run" id="hfzlI!kdimbLZ4R[/8K{">
+            <field name="MOTOR_CON">MOTOR_R1</field>
+            <field name="MOTOR_DIR">0</field>
+            <value name="CONTENT">
+              <shadow type="math_number" id="33zWOm#)ikNu{Z0%ef7)">
+                <field name="NUM">255</field>
+              </shadow>
+              <block type="variables_get" id="~U0pz0V^ygO=;yk[8AM~">
+                <field name="VAR">speed</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="D)CdP~4N$VF4WbtZmt}W" x="305" y="-520">
+    <mutation>
+      <arg name="speed" vartype="UNUMBER"></arg>
+    </mutation>
+    <field name="NAME">TurnRight</field>
+    <statement name="STACK">
+      <block type="motor_MRT_Node_run" id="K%D+i4Lc3/o3WJOy!kj#">
+        <field name="MOTOR_CON">MOTOR_L1</field>
+        <field name="MOTOR_DIR">0</field>
+        <value name="CONTENT">
+          <shadow type="math_number" id="+qu#(sW+KI)5Zq_a6R`X">
+            <field name="NUM">255</field>
+          </shadow>
+          <block type="variables_get" id="=8~pT*8azP/}3#SF(nB!">
+            <field name="VAR">speed</field>
+          </block>
+        </value>
+        <next>
+          <block type="motor_MRT_Node_run" id="tyt|S=GGP+30s~nLy~U3">
+            <field name="MOTOR_CON">MOTOR_R1</field>
+            <field name="MOTOR_DIR">1</field>
+            <value name="CONTENT">
+              <shadow type="math_number" id="Q4m3JdIwQO2%#1u!YbUa">
+                <field name="NUM">255</field>
+              </shadow>
+              <block type="variables_get" id="PH5xJqn?f5A5#-`w7#+P">
+                <field name="VAR">speed</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="esp8266_html" id="uXp]e#6IInBKR;n~Eadj" x="1151" y="-458">
+    <field name="HEAD">inicio</field>
+    <statement name="BODY">
+      <block type="header" id="Dv$Ixp1$.*|U_@q#:-hy">
+        <field name="size">1</field>
+        <value name="modifier">
+          <block type="args" id="v}gy6KrhpRhrU#7}H)LY">
+            <statement name="content">
+              <block type="textalign" id="Ss7]2^H%XUs.Ml^}aoTj">
+                <field name="value">center</field>
+                <next>
+                  <block type="color" id="QVH2lx;i;i=cH2?oiu0n">
+                    <field name="value">#000000</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </value>
+        <statement name="content">
+          <block type="emptytext" id="}bkMh4JHl+(7oBh^SG:6">
+            <field name="content">Control Remoto de Coche por Wifi . Gestión de los motores</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="u:y*lKsC)IzyYAUtlnq1" x="-304" y="-364">
+    <mutation>
+      <arg name="speed" vartype="UNUMBER"></arg>
+    </mutation>
+    <field name="NAME">Backward</field>
+    <statement name="STACK">
+      <block type="motor_MRT_Node_run" id="]=dCP;Y9S(eLXJ]yU33]">
+        <field name="MOTOR_CON">MOTOR_L1</field>
+        <field name="MOTOR_DIR">1</field>
+        <value name="CONTENT">
+          <shadow type="math_number" id="Q.nIO^VG]6b1aEp7l{MM">
+            <field name="NUM">255</field>
+          </shadow>
+          <block type="variables_get" id="/3P1`sj*/Bio6.H.]vS|">
+            <field name="VAR">speed</field>
+          </block>
+        </value>
+        <next>
+          <block type="motor_MRT_Node_run" id="Oqh:X;2ByGid^FpYdo)w">
+            <field name="MOTOR_CON">MOTOR_R1</field>
+            <field name="MOTOR_DIR">1</field>
+            <value name="CONTENT">
+              <shadow type="math_number" id="k71F#nA$*l]~*jx-}n{M">
+                <field name="NUM">255</field>
+              </shadow>
+              <block type="variables_get" id="J0e6S[:KD,*[*J,QDW5*">
+                <field name="VAR">speed</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="5}0E)7J}Ab[%MnHe@?X," x="876" y="-419">
+    <field name="NAME">Stop</field>
+    <statement name="STACK">
+      <block type="motor_MRT_Node_stop" id="Q/x9+,q/ffLUzcZ,JvI)">
+        <field name="MOTOR_CON">MOTOR_L1</field>
+        <next>
+          <block type="motor_MRT_Node_stop" id="ls{{SjbppOFgbRV^G-)m">
+            <field name="MOTOR_CON">MOTOR_R1</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="X~N3Nk+.}%p4v,GP{(h:" x="314" y="-360">
+    <mutation>
+      <arg name="speed" vartype="UNUMBER"></arg>
+    </mutation>
+    <field name="NAME">TurnLeft</field>
+    <statement name="STACK">
+      <block type="motor_MRT_Node_run" id="~1M*Qmyy2Mt5rG%i}p.q">
+        <field name="MOTOR_CON">MOTOR_L1</field>
+        <field name="MOTOR_DIR">1</field>
+        <value name="CONTENT">
+          <shadow type="math_number" id="IGaE~Rw@!b]G!y9F5,IA">
+            <field name="NUM">255</field>
+          </shadow>
+          <block type="variables_get" id="(;MHNQy$Kw8V4((FMB4q">
+            <field name="VAR">speed</field>
+          </block>
+        </value>
+        <next>
+          <block type="motor_MRT_Node_run" id="@Y=dk@cJgh%P22;$b@h:">
+            <field name="MOTOR_CON">MOTOR_R1</field>
+            <field name="MOTOR_DIR">0</field>
+            <value name="CONTENT">
+              <shadow type="math_number" id="FIxZryOS`!BP6XbWyc}B">
+                <field name="NUM">255</field>
+              </shadow>
+              <block type="variables_get" id="f^gYsbtLZo}tav34^jzW">
+                <field name="VAR">speed</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="fhk2;ljq%y#Jl1OB@++x" x="-293" y="-192">
+    <field name="NAME">programa1</field>
+    <statement name="STACK">
+      <block type="serial_println" id="P66u5{v_~=*UrRSF[E/}">
+        <value name="CONTENT">
+          <shadow type="text" id="Yd3iNatlrRn.qqWPV/!A">
+            <field name="TEXT">Programa 1 -- Movimiento motor -- Gimnasta</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="-O:@a0KA;;@0Tj+k`@9J">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="^3QD~5tpU=w+2.9zT6A7">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="}0!Gv=Fu73;7Z:(0B5,q">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_number" id="nG:V3/9CK)MIHz.7R|}5">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="motor_MRT_Node_run" id="m~{(u`NJ%Nm-3yZ^ul@j">
+                <field name="MOTOR_CON">MOTOR_L1</field>
+                <field name="MOTOR_DIR">0</field>
+                <comment pinned="true" h="80" w="160">Con este valor va bien, si es verdad que con los dos portapilas directos va más deprisa</comment>
+                <value name="CONTENT">
+                  <shadow type="math_number" id="Z:PQrgjR3m])hL}w+/l:">
+                    <field name="NUM">225</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="base_delay" id="9%+$yb~T?upM@a$~E7d}">
+                    <field name="unite">s</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="3rDh2[vvL-;Q5-@I/.~1">
+                        <field name="NUM">2</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="motor_MRT_Node_stop" id="@3MWB?.,Y__vay~1wn3G">
+                        <field name="MOTOR_CON">MOTOR_L1</field>
+                        <next>
+                          <block type="base_delay" id="uY%AF]DK_/M/7X(s!yyz">
+                            <field name="unite">m</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="{H@W-ie(Pj(UX[G=)4U5">
+                                <field name="NUM">100</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="motor_MRT_Node_run" id="$2,pKK*9Y3R^.G85Or%+">
+                                <field name="MOTOR_CON">MOTOR_L1</field>
+                                <field name="MOTOR_DIR">1</field>
+                                <value name="CONTENT">
+                                  <shadow type="math_number" id="cCPA^wqw$.nt(*,1QK5D">
+                                    <field name="NUM">225</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="base_delay" id="nninjPH,SGDkk30)59:h">
+                                    <field name="unite">s</field>
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="6%9oLpUf_-B@o*C;kHmi">
+                                        <field name="NUM">2</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="motor_MRT_Node_stop" id="W3!Eud},GO64*doH(|QK">
+                                        <field name="MOTOR_CON">MOTOR_L1</field>
+                                        <next>
+                                          <block type="base_delay" id="pCgFyrq,ZJ=?Y/aDD%kw">
+                                            <field name="unite">m</field>
+                                            <value name="DELAY_TIME">
+                                              <shadow type="math_number" id=":0_pmBQj~_Lb~hh,EcqY">
+                                                <field name="NUM">100</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="motor_MRT_Node_run" id="u]RqS,]]5:r#mKU~EcFr">
+                                                <field name="MOTOR_CON">MOTOR_L1</field>
+                                                <field name="MOTOR_DIR">0</field>
+                                                <comment pinned="false" h="80" w="160">Con este valor las pilas si van justas no se moverá</comment>
+                                                <value name="CONTENT">
+                                                  <shadow type="math_number" id="voN$A0?N3(YV(2:[9OCV">
+                                                    <field name="NUM">200</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="base_delay" id="GP8j9RcqX~+Q4E9-W#R~">
+                                                    <field name="unite">s</field>
+                                                    <value name="DELAY_TIME">
+                                                      <shadow type="math_number" id="r]1MNxUgC7L9@=#[!Ua3">
+                                                        <field name="NUM">2</field>
+                                                      </shadow>
+                                                    </value>
+                                                    <next>
+                                                      <block type="motor_MRT_Node_stop" id="m%ti8~w=ew{p8p2dMjOB">
+                                                        <field name="MOTOR_CON">MOTOR_L1</field>
+                                                        <next>
+                                                          <block type="base_delay" id="=rv]svE58rIM(E}bC8/3">
+                                                            <field name="unite">m</field>
+                                                            <value name="DELAY_TIME">
+                                                              <shadow type="math_number" id="Uu-F:Xjq8t*d1aEj/VpD">
+                                                                <field name="NUM">100</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <next>
+                                                              <block type="motor_MRT_Node_run" id="fc;wtN(uz-=B*WVJiNV7">
+                                                                <field name="MOTOR_CON">MOTOR_L1</field>
+                                                                <field name="MOTOR_DIR">1</field>
+                                                                <value name="CONTENT">
+                                                                  <shadow type="math_number" id=".`c3SUa]#39?e6Hn:GF:">
+                                                                    <field name="NUM">200</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="base_delay" id="=/{Z6pG:2FN)+fN^3(B,">
+                                                                    <field name="unite">s</field>
+                                                                    <value name="DELAY_TIME">
+                                                                      <shadow type="math_number" id="8/mxkWd{J8gsts$-!6Ck">
+                                                                        <field name="NUM">2</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="motor_MRT_Node_stop" id="~l]HxnPxV;a`yBgyjLZC">
+                                                                        <field name="MOTOR_CON">MOTOR_L1</field>
+                                                                        <next>
+                                                                          <block type="base_delay" id="vB~;APHZY{Ii2ke@mVh+">
+                                                                            <field name="unite">m</field>
+                                                                            <value name="DELAY_TIME">
+                                                                              <shadow type="math_number" id="lUAg?b$x*sP!Qky:BVg+">
+                                                                                <field name="NUM">100</field>
+                                                                              </shadow>
+                                                                            </value>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="hq%O{w:P4l9`qslbdhQ." x="433" y="-143">
+    <field name="NAME">programa2</field>
+    <statement name="STACK">
+      <block type="serial_println" id="P`Gq6oA0Utfq#]L0V@WB">
+        <value name="CONTENT">
+          <shadow type="text" id="TS8OxvK1e)?U:{/c3ULM">
+            <field name="TEXT">Programa 2 -- Mando</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id=":RVjVGqJHCu}~}WC-uk(">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="bm(x79A?EpNmSs(bS$.!">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="9oE$L9fv7Yc-SZgiK2va">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_number" id="PYw..Ve2WU2Ua1#6?BmA">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="Attend_remotecontrolMRTNodeIL" id="rTglxSBWkM8[Jt[vG;Y#">
+                <next>
+                  <block type="controls_if" id="@,95LhCeb{fjkqA|5DZv">
+                    <value name="IF0">
+                      <block type="IR_RemoteMRT_Key_NodeIL" id="I1saFV=GJs:RCQo%4KC(">
+                        <field name="KEY">44</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="procedures_callnoreturn" id=":=_Q.Hs*ow`8nVsuCSdB">
+                        <mutation name="Forward">
+                          <arg name="speed"></arg>
+                        </mutation>
+                        <value name="ARG0">
+                          <block type="math_number" id="I8p(`6435Q?^8XNaXvr)">
+                            <field name="NUM">240</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="!U/^rQGu+_J,8*WBQ793">
+                        <value name="IF0">
+                          <block type="IR_RemoteMRT_Key_NodeIL" id="mRQ88uv=DiU[8c?aT3MR">
+                            <field name="KEY">62</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="procedures_callnoreturn" id="e?S;8zTaff|bf^08IR,8">
+                            <mutation name="Backward">
+                              <arg name="speed"></arg>
+                            </mutation>
+                            <value name="ARG0">
+                              <block type="math_number" id="qstOpEEOyP{|c[%xT!#,">
+                                <field name="NUM">240</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="rlGlJ}K|M:,:}m7}7W2?">
+                            <value name="IF0">
+                              <block type="IR_RemoteMRT_Key_NodeIL" id="t5QbxD(nCx`$_vAZ4v|:">
+                                <field name="KEY">63</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="procedures_callnoreturn" id="TsBH2KC1hy,fIbbXTaw{">
+                                <mutation name="TurnLeft">
+                                  <arg name="speed"></arg>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block type="math_number" id="MN=GH-{EP{)CCZ=JsGH`">
+                                    <field name="NUM">240</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="!`kJs%HmOQr]|RG8I~@e">
+                                <value name="IF0">
+                                  <block type="IR_RemoteMRT_Key_NodeIL" id="f`}a86*x(vk;32qtFM;u">
+                                    <field name="KEY">61</field>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="procedures_callnoreturn" id="fPr/g@SbGd$waYe4Jk-0">
+                                    <mutation name="TurnRight">
+                                      <arg name="speed"></arg>
+                                    </mutation>
+                                    <value name="ARG0">
+                                      <block type="math_number" id="o426.4U+B0OrmBbpZ0e+">
+                                        <field name="NUM">240</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="v1W|]=J8I_]D31Q,b6o?">
+                                    <value name="IF0">
+                                      <block type="IR_RemoteMRT_Key_NodeIL" id="*BOfoRXzijk|aKE|Gv;`">
+                                        <field name="KEY">53</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="procedures_callnoreturn" id="afOrOt%!|,:x!_FZ{g)H">
+                                        <mutation name="Stop"></mutation>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="54l=UQv0ZQIurPZ/D4ly" x="1017" y="-141">
+    <field name="NAME">programa3</field>
+    <statement name="STACK">
+      <block type="serial_println" id="cR_W`.b!xz=};15Y(]bo">
+        <value name="CONTENT">
+          <shadow type="text" id="=%[#/Z`==(`5oX6(ZUbT">
+            <field name="TEXT">Programa 3 -- Tren</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id=")IA0pQI?oC6VWh#{UU4O">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="k{=26Klpxw,%#qMX2ff@">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="_xyG+nz-w,fNgV6[e{u6">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_number" id="g$6*:HiI%v{z$D,h5,E_">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="variables_set" id="IPun;hWq)UuQ7.u}jbKp">
+                <field name="VAR">LecturaIRIzq</field>
+                <value name="VALUE">
+                  <block type="IR_sensor2" id="?GgF8#Q=QE!n%CWy1=FF">
+                    <field name="PIN_IR">35</field>
+                    <field name="OUTPUT_VALUE">1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id=";EnHpGBUNXVvk71{c$tq">
+                    <field name="VAR">LecturaIrDrcho</field>
+                    <value name="VALUE">
+                      <block type="IR_sensor2" id="]zsPTC$tUKEumD%VeTkT">
+                        <field name="PIN_IR">36</field>
+                        <field name="OUTPUT_VALUE">1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="*/f#o!l,yIaV*pnuL1kz">
+                        <value name="IF0">
+                          <block type="logic_operation" id="Wm;R._tk$i2Wm#@pr?aD">
+                            <field name="OP">and</field>
+                            <value name="A">
+                              <block type="logic_compare" id="kv]YtC=73.Ir9ZSf-{+X">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="pienRm9~aj.$^hO?yd~n">
+                                    <field name="VAR">LecturaIRIzq</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id=",lcq%,i1yQg=qyRPDVB1">
+                                    <field name="NUM">190</field>
+                                  </shadow>
+                                  <block type="variables_get" id="(k%Ujg3`w*!TUY4pd#[-">
+                                    <field name="VAR">Umbral_IR_Tren</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_compare" id="@1{!d*!kIZCDmao-}.V%">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="x$E3].fBv!wNsX+?Q;#0">
+                                    <field name="VAR">LecturaIrDrcho</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="d_5q-mzLDcZeMRO2-GoG">
+                                    <field name="NUM">190</field>
+                                  </shadow>
+                                  <block type="variables_get" id="1PY:s|uv-n7`zFiBTFDz">
+                                    <field name="VAR">Umbral_IR_Tren</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="procedures_callnoreturn" id="=j.rF/jlMNN.6bjtRPlh">
+                            <mutation name="Forward">
+                              <arg name="speed"></arg>
+                            </mutation>
+                            <value name="ARG0">
+                              <block type="math_number" id="O7RyAhGrsAwoq5b2B|]+">
+                                <field name="NUM">200</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="|6`++MLKKjo$:3.T?g!0">
+                            <value name="IF0">
+                              <block type="logic_operation" id="5iA$vSaWWTB~*NdJ@/WD">
+                                <field name="OP">and</field>
+                                <value name="A">
+                                  <block type="logic_compare" id="#(4:4U2XtIAVe3BX3Cp6">
+                                    <field name="OP">GT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="$i#@QPNK)C*OP1w[_g@5">
+                                        <field name="VAR">LecturaIRIzq</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id=")zmy2?TAcuT:29xu30l@">
+                                        <field name="NUM">190</field>
+                                      </shadow>
+                                      <block type="variables_get" id=":Y:+qy+)p:-!}Cr%AKMK">
+                                        <field name="VAR">Umbral_IR_Tren</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="logic_compare" id="((.B3gX?!t%BsGiI3F`]">
+                                    <field name="OP">LT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="EEe=bs~q:/|a?zH76Eh3">
+                                        <field name="VAR">LecturaIrDrcho</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="N9zS+u%h1F,,@otg2wI}">
+                                        <field name="NUM">190</field>
+                                      </shadow>
+                                      <block type="variables_get" id="Lohl@n|Ai[-T}bWXmk6c">
+                                        <field name="VAR">Umbral_IR_Tren</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="procedures_callnoreturn" id="]2iAEp|PH^5`xOx-lSxf">
+                                <mutation name="TurnRight">
+                                  <arg name="speed"></arg>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block type="math_number" id="V:F^_zP3Zia}Ff[2UR7f">
+                                    <field name="NUM">200</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="E^mV{5kjX{xKm;Q}~iW^">
+                                <value name="IF0">
+                                  <block type="logic_operation" id="NUc%n.F.h}=yr]|L*=WM">
+                                    <field name="OP">and</field>
+                                    <value name="A">
+                                      <block type="logic_compare" id="WjvdCVnp6s$svN.e1O0C">
+                                        <field name="OP">LT</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="*XB-y_b.X_+LGfYEuV^_">
+                                            <field name="VAR">LecturaIRIzq</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <shadow type="math_number" id="f9#@WDp}[4jyatgZ-%b|">
+                                            <field name="NUM">190</field>
+                                          </shadow>
+                                          <block type="variables_get" id=":J$)*zeUHk#s`3L$.V{C">
+                                            <field name="VAR">Umbral_IR_Tren</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="logic_compare" id="J(`CU`HgZiY.rAPp_G@[">
+                                        <field name="OP">GT</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="jZQ!I~AANYt!91Or+bg6">
+                                            <field name="VAR">LecturaIrDrcho</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <shadow type="math_number" id="dGbdD@rgH^fdx2Gr2(c3">
+                                            <field name="NUM">190</field>
+                                          </shadow>
+                                          <block type="variables_get" id="2VyVt^N:09{zr/mrt,yg">
+                                            <field name="VAR">Umbral_IR_Tren</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="procedures_callnoreturn" id="y?QpjM9sZ1M4daeAEHR)">
+                                    <mutation name="TurnLeft">
+                                      <arg name="speed"></arg>
+                                    </mutation>
+                                    <value name="ARG0">
+                                      <block type="math_number" id="*_Fw36c%8CP/C3:k5ru:">
+                                        <field name="NUM">200</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="}o46GfU)SwGenkWi5NW~">
+                                    <value name="IF0">
+                                      <block type="logic_operation" id=":MwHHHl}7!VPIc7;Q^.4">
+                                        <field name="OP">and</field>
+                                        <value name="A">
+                                          <block type="logic_compare" id="kaPf^%8z?yys3q7+Z[!`">
+                                            <field name="OP">GT</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="L7S`+{,jh4{D,Ioaso[i">
+                                                <field name="VAR">LecturaIRIzq</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="W1Yh6#!BYH~W,2Phy_2w">
+                                                <field name="NUM">190</field>
+                                              </shadow>
+                                              <block type="variables_get" id="=-|CFT}SH%PzGIP5zrlW">
+                                                <field name="VAR">Umbral_IR_Tren</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="logic_compare" id="w]oR)WJ/7~%.zj|}nqEW">
+                                            <field name="OP">GT</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="1NgPAgH,|^O}0]N5W-9Q">
+                                                <field name="VAR">LecturaIrDrcho</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="R`J9l0m7k?NNX|DwaQ/N">
+                                                <field name="NUM">190</field>
+                                              </shadow>
+                                              <block type="variables_get" id="76WL?jhv?$?~Ytb{;;bF">
+                                                <field name="VAR">Umbral_IR_Tren</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="procedures_callnoreturn" id="W;}_xN^raAcljwrnHi-2">
+                                        <mutation name="TurnRight">
+                                          <arg name="speed"></arg>
+                                        </mutation>
+                                        <value name="ARG0">
+                                          <block type="math_number" id="w;Nj4G?!)fk7kuU,Ye,%">
+                                            <field name="NUM">200</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="M8C~]rJB6OH^puY%m@KQ" x="-257" y="575">
+    <field name="NAME">programa4</field>
+    <statement name="STACK">
+      <block type="serial_println" id="K,WI}B%G+^~c`rM8}2?D">
+        <value name="CONTENT">
+          <shadow type="text" id="*_G(2zi7$%8iI3IyrpGs">
+            <field name="TEXT">Programa 4 -- Wally</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="AKJMdbq}lxtVg^0r!p-g">
+            <mutation name="Forward">
+              <arg name="speed"></arg>
+            </mutation>
+            <value name="ARG0">
+              <block type="math_number" id="7$:c%2^R8f`o~7f2UCzp">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="#@Z+-!CMH9sVP@:K(mh_">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="logic_compare" id="g,qDFvgcUt4_oij~J5Cj">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="math_number" id="GCzS!|fhP!3E3aEqYB0n">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                        <field name="NUM">10</field>
+                      </shadow>
+                      <block type="math_number" id=",3+55V%Xp$=q@(:/d!(^">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="variables_set" id="#lbB`^rS7kt.C!}@_%Uw">
+                    <field name="VAR">LecturaIRIzq</field>
+                    <value name="VALUE">
+                      <block type="IR_sensor2" id=".QuM6UI?$:eRdEjGP_SX">
+                        <field name="PIN_IR">35</field>
+                        <field name="OUTPUT_VALUE">1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="Qa?jXKolg8:%}E:mGPG~">
+                        <field name="VAR">LecturaIrDrcho</field>
+                        <value name="VALUE">
+                          <block type="IR_sensor2" id="OmY^{]z;tUUHSyTybc`~">
+                            <field name="PIN_IR">36</field>
+                            <field name="OUTPUT_VALUE">1</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_if" id="uDyQa!nF-QU9`lg88F`k">
+                            <value name="IF0">
+                              <block type="logic_compare" id="W`0q]-Z6Y!u`_b^A}fiG">
+                                <field name="OP">GT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="SKFSe4[[cI~hFcz!XwcF">
+                                    <field name="VAR">LecturaIRIzq</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="(ycgpgQ{(6^e+Gy1?ehu">
+                                    <field name="NUM">400</field>
+                                  </shadow>
+                                  <block type="variables_get" id="TkHkrAE?WP}g5OKysTHJ">
+                                    <field name="VAR">Umbral_IR_Wally</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="procedures_callnoreturn" id="]iHkhWYo0Pd:uz1!MP+h">
+                                <mutation name="Stop"></mutation>
+                                <next>
+                                  <block type="base_delay" id="K})VrHb%PloUJannm3=i">
+                                    <field name="unite">m</field>
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="re){5DQSKl|TN/A|g1S(">
+                                        <field name="NUM">50</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="procedures_callnoreturn" id="0^:,v~z,QmrO*^U$[u!y">
+                                        <mutation name="Backward">
+                                          <arg name="speed"></arg>
+                                        </mutation>
+                                        <value name="ARG0">
+                                          <block type="math_number" id="DX5tK};J%/m?~v|0?5]L">
+                                            <field name="NUM">200</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="base_delay" id=";?TZ}!}}60Zns0NG+W*~">
+                                            <field name="unite">s</field>
+                                            <value name="DELAY_TIME">
+                                              <shadow type="math_number" id="U#r{QlUi_}BLoN{Rye+l">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="procedures_callnoreturn" id="wK}Ow4h4u`]~bvi1zmf:">
+                                                <mutation name="TurnRight">
+                                                  <arg name="speed"></arg>
+                                                </mutation>
+                                                <value name="ARG0">
+                                                  <block type="math_number" id="7BcEr}+^R)WpceBEotm2">
+                                                    <field name="NUM">200</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="base_delay" id="2OLp9iroTV--g5SWpfY?">
+                                                    <field name="unite">s</field>
+                                                    <value name="DELAY_TIME">
+                                                      <shadow type="math_number" id="n6U~BEk6ym9T6z]*f5L(">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                    </value>
+                                                    <next>
+                                                      <block type="procedures_callnoreturn" id="Q=wPO`xGMHm/ZzzGG%%N">
+                                                        <mutation name="Forward">
+                                                          <arg name="speed"></arg>
+                                                        </mutation>
+                                                        <value name="ARG0">
+                                                          <block type="math_number" id="$RA=)k*WflWiae(1EDKT">
+                                                            <field name="NUM">200</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="2^BL|T1Ov;O+@EL@PA)H">
+                                <value name="IF0">
+                                  <block type="logic_compare" id="B(`Ma-U4oV!Q6:^.|Lm`">
+                                    <field name="OP">GT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="7te]@IrutF6|Q^6?cxFE">
+                                        <field name="VAR">LecturaIrDrcho</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="(ycgpgQ{(6^e+Gy1?ehu">
+                                        <field name="NUM">400</field>
+                                      </shadow>
+                                      <block type="variables_get" id="2SSq^jlq6^(2f*/l8hd+">
+                                        <field name="VAR">Umbral_IR_Wally</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="procedures_callnoreturn" id=",#pt_1U`#4x5YK1NZsqd">
+                                    <mutation name="Stop"></mutation>
+                                    <next>
+                                      <block type="base_delay" id="2H3~9?*$zwQ=xsocRtOQ">
+                                        <field name="unite">m</field>
+                                        <value name="DELAY_TIME">
+                                          <shadow type="math_number" id="/umbjCT3FdC=;Ajf(YO.">
+                                            <field name="NUM">50</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="procedures_callnoreturn" id="b]~BhRD=^~?TEX-grT`B">
+                                            <mutation name="Backward">
+                                              <arg name="speed"></arg>
+                                            </mutation>
+                                            <value name="ARG0">
+                                              <block type="math_number" id="3}sGrV5ejAZYWofw|xkA">
+                                                <field name="NUM">200</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="base_delay" id="oh{@U^aEB`eJ+7/m5FJ0">
+                                                <field name="unite">s</field>
+                                                <value name="DELAY_TIME">
+                                                  <shadow type="math_number" id="{xn67mjYHNu7/c@NEBM4">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="procedures_callnoreturn" id="=Bp|Pq$l[3f]Vto}dZ|S">
+                                                    <mutation name="TurnLeft">
+                                                      <arg name="speed"></arg>
+                                                    </mutation>
+                                                    <value name="ARG0">
+                                                      <block type="math_number" id="TC]E3X].3:S%mzgMaP0O">
+                                                        <field name="NUM">200</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="base_delay" id="38(vyzDOAi;^rKag_|a%">
+                                                        <field name="unite">s</field>
+                                                        <value name="DELAY_TIME">
+                                                          <shadow type="math_number" id="o;?]XRKS,.5kygx!.o5z">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <next>
+                                                          <block type="procedures_callnoreturn" id="x]X{HB526_k,-1)y)0KX">
+                                                            <mutation name="Forward">
+                                                              <arg name="speed"></arg>
+                                                            </mutation>
+                                                            <value name="ARG0">
+                                                              <block type="math_number" id="vI8K[m_~{_Drfng_`[`]">
+                                                                <field name="NUM">200</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="K$uF*i1.Q()+}0;XS?3)" x="1149" y="649">
+    <field name="NAME">programa5</field>
+    <statement name="STACK">
+      <block type="serial_println" id="m1OL,*eZWgX6h)o=TN8V">
+        <value name="CONTENT">
+          <shadow type="text" id=":fxvIZEOT|;6[lQ9`Dqy">
+            <field name="TEXT">Programa 5 -- Pato</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="C_kp]lkxpanBAlS(+apm">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="{=gVZTzC[j%|$k5POxhK">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="!8SZW%]XOBP,QsR);~g0">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_number" id="^{y.R5o6e~YWo`#UcifA">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="variables_set" id="/tLwvL.#*C00[eZu/)8~">
+                <field name="VAR">LecturaIRIzq</field>
+                <value name="VALUE">
+                  <block type="IR_sensor2" id="2yX,l5G~h.[TZJ=Qz]Mo">
+                    <field name="PIN_IR">35</field>
+                    <field name="OUTPUT_VALUE">1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="Z9C1RRy$e;Rtp0ImEEFU">
+                    <field name="VAR">LecturaIrDrcho</field>
+                    <value name="VALUE">
+                      <block type="IR_sensor2" id="{%:Skhf`RGE}2arh$fLa">
+                        <field name="PIN_IR">36</field>
+                        <field name="OUTPUT_VALUE">1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="a@wi1%%I_/k}VzHavrLl">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="B!JrPZH91M{REj5:P;6/">
+                            <field name="OP">GT</field>
+                            <value name="A">
+                              <block type="variables_get" id="A:xXZc_~lOW(1H0z90^}">
+                                <field name="VAR">LecturaIRIzq</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="EE/,:Lu.GR*H5fq_pcGc">
+                                <field name="NUM">400</field>
+                              </shadow>
+                              <block type="variables_get" id="):e@AdrI0KC}wr[Rt132">
+                                <field name="VAR">Umbral_IR_Pato</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="motor_MRT_Node_run" id="f8rSBQN6/x`dV2-5iM:)">
+                            <field name="MOTOR_CON">MOTOR_R1</field>
+                            <field name="MOTOR_DIR">0</field>
+                            <value name="CONTENT">
+                              <shadow type="math_number" id="EanMf-a]LGXiTn`oT}_k">
+                                <field name="NUM">240</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="motor_MRT_Node_stop" id="l)Ay/Krurb:wPa@I_O/(">
+                            <field name="MOTOR_CON">MOTOR_R1</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="+%{8.]#s.c6vu{)|?x:x">
+                            <mutation else="1"></mutation>
+                            <value name="IF0">
+                              <block type="logic_compare" id="s}//ppLxYHMZ]V5^DA(V">
+                                <field name="OP">GT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="p.{g=Z,?vzg9-(OQ3PnT">
+                                    <field name="VAR">LecturaIrDrcho</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="EE/,:Lu.GR*H5fq_pcGc">
+                                    <field name="NUM">400</field>
+                                  </shadow>
+                                  <block type="variables_get" id="$9G9?;qJh,M_rr;A:TCu">
+                                    <field name="VAR">Umbral_IR_Pato</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="motor_MRT_Node_run" id="Md+97Ns9Z^6cr+E(ZlJp">
+                                <field name="MOTOR_CON">MOTOR_L1</field>
+                                <field name="MOTOR_DIR">0</field>
+                                <value name="CONTENT">
+                                  <shadow type="math_number" id="=wii3fBoZBx84`h[hhtu">
+                                    <field name="NUM">240</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                            <statement name="ELSE">
+                              <block type="motor_MRT_Node_stop" id=")zU:4W-7%)dQ$JzDu7ak">
+                                <field name="MOTOR_CON">MOTOR_L1</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="j6EI5Ia@@Ux3Pjv^i}w3" x="423" y="1483">
+    <field name="NAME">programa7</field>
+    <statement name="STACK">
+      <block type="serial_println" id="hheouZ*MDm*MCn8cnzfy">
+        <value name="CONTENT">
+          <shadow type="text" id="MC~oO.Oj$Ltj{Y]F;2;_">
+            <field name="TEXT">Programa 7 -- Peonza</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="*Nu6KL=^oziHS1kKua/9">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="Qo(yxGmtLh[(]Q1FnMfw">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="I-EpNB?2KY~~^e5zNT|S">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_number" id="RMZmmlSZN7:C+i.lQU^F">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="controls_if" id="~Y~T`/3tgnGu;@~XJ$o=">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="button_sensor2" id="zyQ+I|i^:Y7,c^yC`h+q">
+                    <field name="PIN_BUTTON">33</field>
+                    <field name="LOGIC">TRUE</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="digital_write0" id="0Co~oJas`S_a/nh0*:J7">
+                    <field name="PIN">23</field>
+                    <field name="STAT">HIGH</field>
+                    <next>
+                      <block type="procedures_callnoreturn" id="VhjB[!jH_%3#A0v5Ra%e">
+                        <mutation name="Forward">
+                          <arg name="speed"></arg>
+                        </mutation>
+                        <value name="ARG0">
+                          <block type="math_number" id=";jkpe!b4GK9_P{FsvjAm">
+                            <field name="NUM">255</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="digital_write0" id="zw{h`^R)x6?8AR^rj;,-">
+                    <field name="PIN">23</field>
+                    <field name="STAT">LOW</field>
+                    <next>
+                      <block type="procedures_callnoreturn" id="{/Uj6vt1;5?xW3tlorGW">
+                        <mutation name="Stop"></mutation>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="4m//W7g:cynKs58]+6h]" x="989" y="1583">
+    <field name="NAME">programa12</field>
+    <statement name="STACK">
+      <block type="serial_println" id="K.]OBOe2~z@G4ayrk;al">
+        <value name="CONTENT">
+          <shadow type="text" id="i3cFtZ[|yj[RqDB$lI[`">
+            <field name="TEXT">Programa 12 -- Guitarra</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="8w![*o;neVkkKm9/(G?T">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="z[vR4L5PjVC6evM*e:A;">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="c(~U1@6B*6m9,Eq6jqwe">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_number" id="HCLaUQ:Om|3R_alY3;}v">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="controls_if" id="Rx{7/+2BZhr-X*!Iz@M{">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_operation" id="uU*QBy=hg|tC{vrcZ/5{">
+                    <field name="OP">and</field>
+                    <value name="A">
+                      <block type="button_sensor2" id="*^NO(5/fc^L]WjDEi),2">
+                        <field name="PIN_BUTTON">33</field>
+                        <field name="LOGIC">TRUE</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="button_sensor2" id="xPmoFD{C(%Wc`bT4UE0w">
+                        <field name="PIN_BUTTON">34</field>
+                        <field name="LOGIC">TRUE</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="play_esp32" id="{Unk+v(85Ycr^syy?y_g">
+                    <field name="PIN_BUZZER">32</field>
+                    <field name="note">493</field>
+                    <field name="tempo">500</field>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="controls_if" id="K:}cj;.#UM2FVkX:7Jfx">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_operation" id=";v#q)2=vtD]N^.79F[ZF">
+                        <field name="OP">and</field>
+                        <value name="A">
+                          <block type="logic_compare" id="ugp{8V~aVT;^|y,no1lV">
+                            <field name="OP">GT</field>
+                            <value name="A">
+                              <block type="IR_sensor2" id="UqOhiK1+?P|qHBb`dE(H">
+                                <field name="PIN_IR">35</field>
+                                <field name="OUTPUT_VALUE">1</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="EE/,:Lu.GR*H5fq_pcGc">
+                                <field name="NUM">400</field>
+                              </shadow>
+                              <block type="variables_get" id="GuB7#k6~$ar2VG@c;|$u">
+                                <field name="VAR">Umbral_IR_Piano</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_compare" id="Mx-S;1g6!9{VyVdM^i(D">
+                            <field name="OP">GT</field>
+                            <value name="A">
+                              <block type="IR_sensor2" id="08n$O)7`%;|2;U):}vFK">
+                                <field name="PIN_IR">36</field>
+                                <field name="OUTPUT_VALUE">1</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="EE/,:Lu.GR*H5fq_pcGc">
+                                <field name="NUM">400</field>
+                              </shadow>
+                              <block type="variables_get" id="MJUggo1o?WOSTKSjpC=?">
+                                <field name="VAR">Umbral_IR_Piano</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="play_esp32" id="++drq7mFc2rq=D:s^)w@">
+                        <field name="PIN_BUZZER">32</field>
+                        <field name="note">440</field>
+                        <field name="tempo">500</field>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="controls_if" id="tzdH%Y#c^9,z.)Om0XTP">
+                        <value name="IF0">
+                          <block type="button_sensor2" id="}7EW.*|#DhVvB3N9=t{h">
+                            <field name="PIN_BUTTON">33</field>
+                            <field name="LOGIC">TRUE</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="play_esp32" id="6y5PeC}8N|Vn-N*3?N`d">
+                            <field name="PIN_BUZZER">32</field>
+                            <field name="note">329</field>
+                            <field name="tempo">500</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="%U2jJ17Szkzt-]jVDrU}">
+                            <value name="IF0">
+                              <block type="button_sensor2" id="):)5c]Lho@QA=XyH`R_p">
+                                <field name="PIN_BUTTON">34</field>
+                                <field name="LOGIC">TRUE</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="play_esp32" id="[_.-[-ohn/Y0i9)d9ABm">
+                                <field name="PIN_BUZZER">32</field>
+                                <field name="note">349</field>
+                                <field name="tempo">500</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="VA-O2yo$fQmWgBeO!o?C">
+                                <value name="IF0">
+                                  <block type="logic_compare" id="a}KRThCG86nj.#u#Q/q5">
+                                    <field name="OP">GT</field>
+                                    <value name="A">
+                                      <block type="IR_sensor2" id="No8=?+i6C.8ox{=5!cPD">
+                                        <field name="PIN_IR">35</field>
+                                        <field name="OUTPUT_VALUE">1</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="Moshc`[sNYGm}JoB0^oM">
+                                        <field name="NUM">400</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="play_esp32" id="^zp~gJC,6gz]f$=N.CDV">
+                                    <field name="PIN_BUZZER">32</field>
+                                    <field name="note">261</field>
+                                    <field name="tempo">500</field>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="W0+pP$T8t@v7vIs()^3b">
+                                    <value name="IF0">
+                                      <block type="logic_compare" id="o/~;4HIf3OIDz%k.W8Y+">
+                                        <field name="OP">GT</field>
+                                        <value name="A">
+                                          <block type="IR_sensor2" id="Jv2xf^#yM%4i$GclF6):">
+                                            <field name="PIN_IR">36</field>
+                                            <field name="OUTPUT_VALUE">1</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <shadow type="math_number" id="nSE7NL7*HcKu8kSpUk.5">
+                                            <field name="NUM">400</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="play_esp32" id="Wb~*q`pb:m.:sA*0)E-O">
+                                        <field name="PIN_BUZZER">32</field>
+                                        <field name="note">293</field>
+                                        <field name="tempo">500</field>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="controls_if" id="W+Ld$totzys11khNq%@E">
+                                        <value name="IF0">
+                                          <block type="logic_compare" id="$C199c;5`6!c%8$?|#qy">
+                                            <field name="OP">LT</field>
+                                            <value name="A">
+                                              <block type="LDR_sensor2" id="bN?xjq.54^Ro~nbP8f.H">
+                                                <field name="PIN_LDR">39</field>
+                                                <field name="OUTPUT_VALUE">1</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="RZuAx,?b=k,V~cQ=7N7O">
+                                                <field name="NUM">400</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="play_esp32" id="RXl|Rl[45Ae^gVBYToFJ">
+                                            <field name="PIN_BUZZER">32</field>
+                                            <field name="note">392</field>
+                                            <field name="tempo">500</field>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="controls_if" id="_|NF;bR}RJCYN0995!|e">
+                                            <value name="IF0">
+                                              <block type="MRTNode_button" id="7JN99b!;G1D+MjDiG_{7"></block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="RTTTL_music" id="Gi|/fgv5J6vYYjb%KnDt">
+                                                <field name="PIN_BUZZER">32</field>
+                                                <field name="MELODY">StarWars</field>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <next>
+                  <block type="notone_esp32" id="WS;vK}aRV{Yo5r=4_=[q">
+                    <field name="PIN_BUZZER">32</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="aPQv_a^dO#X1FzuyGNy," x="-256" y="1682">
+    <field name="NAME">programa6</field>
+    <statement name="STACK">
+      <block type="serial_println" id="6|6e,k94O^RJ*]5#graE">
+        <value name="CONTENT">
+          <shadow type="text" id="D]M7Ju(Za_6)kW+suUpe">
+            <field name="TEXT">Programa 6 -- Sumo</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="~^dZ(:j~3Cvkb.onq#El">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="%OnP6-$Fg!{]RGAGHY!,">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="a,$p~Nkh#IJ3rKKpI~ZQ">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_number" id="):Okn5Q}%$p@eJo.lChw">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="variables_set" id="_/$V^;agQC`:##F}PhVB">
+                <field name="VAR">LecturaIRIzq</field>
+                <value name="VALUE">
+                  <block type="IR_sensor2" id="d;^6^0aV}[A,xwkgNL(l">
+                    <field name="PIN_IR">35</field>
+                    <field name="OUTPUT_VALUE">1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="]Y4t:rrIgeDX59-3eBx=">
+                    <field name="VAR">LecturaIrDrcho</field>
+                    <value name="VALUE">
+                      <block type="IR_sensor2" id="360,2zWtzro]%Z;pw;w:">
+                        <field name="PIN_IR">36</field>
+                        <field name="OUTPUT_VALUE">1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="*45K4C^hA.Ea3:^jO{iy">
+                        <value name="IF0">
+                          <block type="logic_operation" id="80CZPZW=5G_OQ^Luz70A">
+                            <field name="OP">and</field>
+                            <value name="A">
+                              <block type="logic_compare" id=",Gy[8j#rIqu]li(F9;3N">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="J@dQU41G6?rJH@00;gl0">
+                                    <field name="VAR">LecturaIRIzq</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="/K=D7uy~|%B$S}GLLrye">
+                                    <field name="NUM">200</field>
+                                  </shadow>
+                                  <block type="variables_get" id="-!G4;vk[kgDG^4A7qRhl">
+                                    <field name="VAR">Umbral_IR_Boxeador</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_compare" id="?vT9h/M$j2KwBxw{w6Q{">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="k!,^TsYFiD:*Tx@NANC[">
+                                    <field name="VAR">LecturaIrDrcho</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="libo*y{e@YCalg#}HT@=">
+                                    <field name="NUM">200</field>
+                                  </shadow>
+                                  <block type="variables_get" id="Q0:}EHb+).cX`@zLdx{q">
+                                    <field name="VAR">Umbral_IR_Boxeador</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="procedures_callnoreturn" id="o~d`$u=))?+kR~b|smtl">
+                            <mutation name="Stop"></mutation>
+                            <next>
+                              <block type="base_delay" id="t_k1IBkwYS9MM,Sdsi_w">
+                                <field name="unite">m</field>
+                                <value name="DELAY_TIME">
+                                  <shadow type="math_number" id="f:aXfs~l3U|F/sa!SdRY">
+                                    <field name="NUM">100</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="procedures_callnoreturn" id="rP-](Yz4tDSsm@[DELv{">
+                                    <mutation name="Backward">
+                                      <arg name="speed"></arg>
+                                    </mutation>
+                                    <value name="ARG0">
+                                      <block type="math_number" id="Fb?W_ZR1FuyE]@yDp63i">
+                                        <field name="NUM">180</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="base_delay" id="T3d-rLf@6}Hto^F/y*[M">
+                                        <field name="unite">m</field>
+                                        <value name="DELAY_TIME">
+                                          <shadow type="math_number" id="II(NX7Q:2?1CDG8;}qAL">
+                                            <field name="NUM">500</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="procedures_callnoreturn" id="jcQueD:DWxq:,K5!B.(.">
+                                            <mutation name="TurnRight">
+                                              <arg name="speed"></arg>
+                                            </mutation>
+                                            <value name="ARG0">
+                                              <block type="math_number" id="iwBgDm,`g9|}Jr[p+(8m">
+                                                <field name="NUM">180</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="base_delay" id="hDg[`/a^svGb%D`v5QZ9">
+                                                <field name="unite">m</field>
+                                                <value name="DELAY_TIME">
+                                                  <shadow type="math_number" id="{B#Y(UnU*R@(Y^Obvoc^">
+                                                    <field name="NUM">500</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="I$HOWg4){yF?QH4vB1u-">
+                            <value name="IF0">
+                              <block type="logic_operation" id="^iNulJ3+arS{tb*S8{eH">
+                                <field name="OP">and</field>
+                                <value name="A">
+                                  <block type="logic_compare" id=":E8`XM%;9tT,?Ce(olgO">
+                                    <field name="OP">GT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="v7jm=sxP2|o5F!sI!)z*">
+                                        <field name="VAR">LecturaIRIzq</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="pO{*sxIl#KNmswU%w4z}">
+                                        <field name="NUM">200</field>
+                                      </shadow>
+                                      <block type="variables_get" id="0HD8DVpF`lHcH/c;o;Sa">
+                                        <field name="VAR">Umbral_IR_Boxeador</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="logic_compare" id="eONL1g?IWpU_HV6:;KQm">
+                                    <field name="OP">LT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="U2*iE,u~+k8##+E.R]6!">
+                                        <field name="VAR">LecturaIrDrcho</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="^AB!5^-?)*+X`W*?sprn">
+                                        <field name="NUM">200</field>
+                                      </shadow>
+                                      <block type="variables_get" id="WLdYS5T+2u6D-VQA`$1Z">
+                                        <field name="VAR">Umbral_IR_Boxeador</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="procedures_callnoreturn" id="G_8APi5)9-]6gY9Q0^{P">
+                                <mutation name="Stop"></mutation>
+                                <next>
+                                  <block type="base_delay" id="-dAdpra^E:vt.%CP~Gts">
+                                    <field name="unite">m</field>
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="l`4aO:26qYjuSP/}r/`Q">
+                                        <field name="NUM">100</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="procedures_callnoreturn" id="`g?3DwEPfLQ{E_{,@|b/">
+                                        <mutation name="Backward">
+                                          <arg name="speed"></arg>
+                                        </mutation>
+                                        <value name="ARG0">
+                                          <block type="math_number" id="cc)EEn5kMk?LNGXy*wq5">
+                                            <field name="NUM">180</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="base_delay" id=";z|J11FuOdqD/X3~mP+Q">
+                                            <field name="unite">m</field>
+                                            <value name="DELAY_TIME">
+                                              <shadow type="math_number" id="C^4Nxs%Nl:{=6V(#.jJ$">
+                                                <field name="NUM">500</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="procedures_callnoreturn" id="/i:+E:n=-d^9)!rKxQl=">
+                                                <mutation name="TurnRight">
+                                                  <arg name="speed"></arg>
+                                                </mutation>
+                                                <value name="ARG0">
+                                                  <block type="math_number" id="b2+_]IWnupjZP!kk1+p9">
+                                                    <field name="NUM">180</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="base_delay" id="oYP5A^LKZ_P]0VogCv}7">
+                                                    <field name="unite">m</field>
+                                                    <value name="DELAY_TIME">
+                                                      <shadow type="math_number" id="n5|#WcEN)Wwv0U+YQZX`">
+                                                        <field name="NUM">500</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="8FD+8$]+U,ahl|*1Sl#N">
+                                <value name="IF0">
+                                  <block type="logic_operation" id=".7~_(ATJb5pWNA22jvip">
+                                    <field name="OP">and</field>
+                                    <value name="A">
+                                      <block type="logic_compare" id="`Ajc_eQZM#{2B)8:Fv7j">
+                                        <field name="OP">LT</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="]4F[L.KkYJ#N*#Y~;q`7">
+                                            <field name="VAR">LecturaIRIzq</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <shadow type="math_number" id="`[RqQ^.qLjIiqVEEj/iv">
+                                            <field name="NUM">200</field>
+                                          </shadow>
+                                          <block type="variables_get" id="Rn`ZPyKg~$07t5bgB^W@">
+                                            <field name="VAR">Umbral_IR_Boxeador</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="logic_compare" id="xV(@NeG=L]69+(hVe33u">
+                                        <field name="OP">GT</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="6f~$G*H!b=E`86lca^KZ">
+                                            <field name="VAR">LecturaIrDrcho</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <shadow type="math_number" id="dlAvx!nU,9EzcQ$3grgm">
+                                            <field name="NUM">200</field>
+                                          </shadow>
+                                          <block type="variables_get" id="oG4=chz*di_=tZQ?dy9w">
+                                            <field name="VAR">Umbral_IR_Boxeador</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="procedures_callnoreturn" id="GVg1UY^VdXhNm%|/M%6a">
+                                    <mutation name="Stop"></mutation>
+                                    <next>
+                                      <block type="base_delay" id="MjN*=GE,45ma+/?b6.bM">
+                                        <field name="unite">m</field>
+                                        <value name="DELAY_TIME">
+                                          <shadow type="math_number" id="=(KE!+BQ%k!HzMUu8rzh">
+                                            <field name="NUM">100</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="procedures_callnoreturn" id="k_teT_9dCV@XxK)}L)h^">
+                                            <mutation name="Backward">
+                                              <arg name="speed"></arg>
+                                            </mutation>
+                                            <value name="ARG0">
+                                              <block type="math_number" id=":{-E*VcQeV1{yen@_zUF">
+                                                <field name="NUM">180</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="base_delay" id="zp@-i%Ri^L?O*{*2*hT;">
+                                                <field name="unite">m</field>
+                                                <value name="DELAY_TIME">
+                                                  <shadow type="math_number" id="FeQNFeo_EON;ny%.OciO">
+                                                    <field name="NUM">500</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="procedures_callnoreturn" id="uH-^z%o9xn7IuQ#Gvi)=">
+                                                    <mutation name="TurnLeft">
+                                                      <arg name="speed"></arg>
+                                                    </mutation>
+                                                    <value name="ARG0">
+                                                      <block type="math_number" id="n74PF~Vlu]9Xt0BZY/N)">
+                                                        <field name="NUM">180</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="base_delay" id="?XiG`XhK8WOw,mSB?0jB">
+                                                        <field name="unite">m</field>
+                                                        <value name="DELAY_TIME">
+                                                          <shadow type="math_number" id="ueXb|qOK.2xXs|zlNn0O">
+                                                            <field name="NUM">500</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="s|Frezx`w#Nh[vGsYQC`">
+                                    <value name="IF0">
+                                      <block type="logic_operation" id="UH~dYa*Ys-k2vi7a2qc:">
+                                        <field name="OP">and</field>
+                                        <value name="A">
+                                          <block type="logic_compare" id="MI)S*ULvyzA]eVl5.nzm">
+                                            <field name="OP">GT</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="tE/v1u!hud5hjpJ3+#LB">
+                                                <field name="VAR">LecturaIRIzq</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="vy,i_!5C:JMwQC}453$A">
+                                                <field name="NUM">200</field>
+                                              </shadow>
+                                              <block type="variables_get" id="${Pl/2WBHJ%8TSq1Mb_-">
+                                                <field name="VAR">Umbral_IR_Boxeador</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="logic_compare" id="kqu9`mzs3+PCFh$-gzZN">
+                                            <field name="OP">GT</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="e]6OZcYh0JgA]oVDidJC">
+                                                <field name="VAR">LecturaIrDrcho</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="9{K_[BiTp0f+,yTOa}X}">
+                                                <field name="NUM">200</field>
+                                              </shadow>
+                                              <block type="variables_get" id="6:VOK7y|,:C=V?:9fUi~">
+                                                <field name="VAR">Umbral_IR_Boxeador</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="procedures_callnoreturn" id="W:7S7`z$-jM1A)c4wsk:">
+                                        <mutation name="Forward">
+                                          <arg name="speed"></arg>
+                                        </mutation>
+                                        <value name="ARG0">
+                                          <block type="math_number" id="/W,{wmt?U@qquqy5A]15">
+                                            <field name="NUM">180</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="-+)|iBW5+4@OL/%ui+_j" x="1859" y="2022">
+    <field name="NAME">programa8</field>
+    <statement name="STACK">
+      <block type="serial_println" id="A|{mrh;syC)CUF?I^ZK0">
+        <value name="CONTENT">
+          <shadow type="text" id="KR`.)^!tE1OK?Hgdz|hz">
+            <field name="TEXT">Programa 8 -- Mando con llave infrarrojo</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="}]5Um#^4-6y#uHX22suO">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="5:8[,Fn/P}-kT5;$=EZ=">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="$;}IdecNt[yec+d6oVVS">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_number" id="EC%xw|n8l){{X.z[a#,}">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="Attend_remotecontrolMRTNodeIL" id="jVAm~blQ3g/iYrdOHldI">
+                <next>
+                  <block type="controls_if" id="p9-/zcM~wf8q2h{-pc9Y">
+                    <value name="IF0">
+                      <block type="logic_compare" id="EWM@aQs6z23VZGC*B3_W">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="IR_sensor2" id="lA*KR6_{MY27^ekeNyG6">
+                            <field name="PIN_IR">35</field>
+                            <field name="OUTPUT_VALUE">1</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="EE/,:Lu.GR*H5fq_pcGc">
+                            <field name="NUM">400</field>
+                          </shadow>
+                          <block type="variables_get" id="?I[9|H]/xN|BV7D=v~#p">
+                            <field name="VAR">Umbral_IR_MCoche</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="controls_if" id="3:vTh+B@,WE%-)#;CE*:">
+                        <value name="IF0">
+                          <block type="IR_RemoteMRT_Key_NodeIL" id=",$J*E?a/]URxAv5.G8(~">
+                            <field name="KEY">44</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="procedures_callnoreturn" id="K+;}5S78uTI*l]V_q[KG">
+                            <mutation name="Forward">
+                              <arg name="speed"></arg>
+                            </mutation>
+                            <value name="ARG0">
+                              <block type="math_number" id="uCwBi.F4%4PNuXXlPtM{">
+                                <field name="NUM">240</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id=";)7@VQ^5SrA^+2#Tt6ZA">
+                            <value name="IF0">
+                              <block type="IR_RemoteMRT_Key_NodeIL" id="*~=6Q)lzN,9eFGo7uVh,">
+                                <field name="KEY">62</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="procedures_callnoreturn" id="J;1(9WOLHLta39Jj9S^-">
+                                <mutation name="Backward">
+                                  <arg name="speed"></arg>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block type="math_number" id="T:#u}W6SCJh:5{8m$2YC">
+                                    <field name="NUM">240</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="FRm*S|2YMDbYNlVKeQ5l">
+                                <value name="IF0">
+                                  <block type="IR_RemoteMRT_Key_NodeIL" id="|:O_=,$#Fbv2aGa%8baD">
+                                    <field name="KEY">63</field>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="procedures_callnoreturn" id="9f!@cvv3vMrHsIIBL|2H">
+                                    <mutation name="TurnLeft">
+                                      <arg name="speed"></arg>
+                                    </mutation>
+                                    <value name="ARG0">
+                                      <block type="math_number" id="uMQ`8dU_Voq2D8?Z4`jw">
+                                        <field name="NUM">240</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="aD.gSx0zZpeXR/jMsWno">
+                                    <value name="IF0">
+                                      <block type="IR_RemoteMRT_Key_NodeIL" id="[[ur~Jt^~}k%)Q9uhrIh">
+                                        <field name="KEY">61</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="procedures_callnoreturn" id="4s?*G}7XSh!{VYuQ3$P-">
+                                        <mutation name="TurnRight">
+                                          <arg name="speed"></arg>
+                                        </mutation>
+                                        <value name="ARG0">
+                                          <block type="math_number" id="[]C7juV4i`2+_*C!T9`i">
+                                            <field name="NUM">240</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="controls_if" id="4AEs`{`r+gA^tSw8dfL2">
+                                        <value name="IF0">
+                                          <block type="IR_RemoteMRT_Key_NodeIL" id=".8b0||^q(,y0uVsVTXk0">
+                                            <field name="KEY">53</field>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="procedures_callnoreturn" id="Mn;(*m.oy*Y$V}qG2$[1">
+                                            <mutation name="Stop"></mutation>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="POHuhE}Vu5vjiKwPKT,O" x="1133" y="2568">
+    <field name="NAME">programa9</field>
+    <statement name="STACK">
+      <block type="serial_println" id="Uqt~*#7mgU0})yUqh?O^">
+        <value name="CONTENT">
+          <shadow type="text" id=".VN(KB[[-hvriYjyb}.$">
+            <field name="TEXT">Programa 9 --Diana</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="motor_MRT_Node_run" id="k@zi^_51T1E[m%q[+Njb">
+            <field name="MOTOR_CON">MOTOR_L1</field>
+            <field name="MOTOR_DIR">0</field>
+            <value name="CONTENT">
+              <shadow type="math_number" id="QXq)}ccK;vuWd$g^Ce.n">
+                <field name="NUM">200</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="3VVKi0_^IreaipEFpC@l">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="logic_compare" id="Grak3vGWi6_@Ji}bi*kC">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="math_number" id="ftl1WO!(JGZdzVOM_,Rh">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                        <field name="NUM">10</field>
+                      </shadow>
+                      <block type="math_number" id="c)$3N]|xB?QVB9m`POW[">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="controls_if" id="Sq`J6?q65spcal?y6b:M">
+                    <value name="IF0">
+                      <block type="logic_compare" id="9DF*!}/KQk1Ss$4rbR?A">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="IR_sensor2" id="rth9Cdvblg%I9NzL(1m0">
+                            <field name="PIN_IR">35</field>
+                            <field name="OUTPUT_VALUE">1</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="ST:/#9Baz75^o^s12ole">
+                            <field name="NUM">400</field>
+                          </shadow>
+                          <block type="variables_get" id="Y$Hv}6JBA7gYwE`u~jYQ">
+                            <field name="VAR">Umbral_IR_Diana</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="motor_MRT_Node_stop" id="b9G/+1*5f4jG}mSWMO?A">
+                        <field name="MOTOR_CON">MOTOR_L1</field>
+                        <next>
+                          <block type="digital_write0" id="4(fUhmyelnfmFJnsfRsg">
+                            <field name="PIN">23</field>
+                            <field name="STAT">HIGH</field>
+                            <next>
+                              <block type="variables_set" id="-g8V6aBz2J!n!cLe3Nk0">
+                                <field name="VAR">melodia</field>
+                                <value name="VALUE">
+                                  <block type="math_random_int" id="8|)SA@V#Q6PDG`l1!GnN">
+                                    <value name="FROM">
+                                      <shadow type="math_number" id="x4|@j7$3V?0.{*-8=BMS">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="TO">
+                                      <shadow type="math_number" id=")7nj/0h}?]cFwh(iJX#r">
+                                        <field name="NUM">6</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="controls_switch" id="{O?U3-W%}IJ:VcSwcxqw">
+                                    <mutation casebreak="4" default="1"></mutation>
+                                    <field name="SWVAR">melodia</field>
+                                    <value name="CASE0">
+                                      <block type="math_number" id="n00@dvPtUw$tv=EWYKjp">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="RTTTL_music" id="|=ztw/^g9KF,--j|%e)h">
+                                        <field name="PIN_BUZZER">32</field>
+                                        <field name="MELODY">Muppets</field>
+                                      </block>
+                                    </statement>
+                                    <value name="CASE1">
+                                      <block type="math_number" id=")fc;Qoko7BHfaX=Q+#_o">
+                                        <field name="NUM">2</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO1">
+                                      <block type="RTTTL_music" id="CECAbDeMdqC0P:+kFRqf">
+                                        <field name="PIN_BUZZER">32</field>
+                                        <field name="MELODY">Indiana</field>
+                                      </block>
+                                    </statement>
+                                    <value name="CASE2">
+                                      <block type="math_number" id="[nqyn9lK7R%;f.~S[Bk?">
+                                        <field name="NUM">3</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO2">
+                                      <block type="RTTTL_music" id="m_[6K@+y^gl9^3eb]0%s">
+                                        <field name="PIN_BUZZER">32</field>
+                                        <field name="MELODY">A_Team</field>
+                                      </block>
+                                    </statement>
+                                    <value name="CASE3">
+                                      <block type="math_number" id="Np:R`dsNd$Kl^7.P`#Cr">
+                                        <field name="NUM">4</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO3">
+                                      <block type="RTTTL_music" id="~l)[3oUv{4.-!zQ(5085">
+                                        <field name="PIN_BUZZER">32</field>
+                                        <field name="MELODY">Looney</field>
+                                      </block>
+                                    </statement>
+                                    <value name="CASE4">
+                                      <block type="math_number" id="l7mH+tH@x`cyKV8hDy11">
+                                        <field name="NUM">5</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO4">
+                                      <block type="RTTTL_music" id="Xt6o$3|}iTA8K;vgs]L^">
+                                        <field name="PIN_BUZZER">32</field>
+                                        <field name="MELODY">Gadget</field>
+                                      </block>
+                                    </statement>
+                                    <statement name="DEFAULT">
+                                      <block type="RTTTL_music" id="cZ{QngzJQ*h#06|9E%90">
+                                        <field name="PIN_BUZZER">32</field>
+                                        <field name="MELODY">_20thCenFox</field>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="notone_esp32" id="5c80rJ-PnDWS=r1QmO.h">
+                                        <field name="PIN_BUZZER">32</field>
+                                        <next>
+                                          <block type="digital_write0" id="zhRIAk_V;#OE.29(zId=">
+                                            <field name="PIN">23</field>
+                                            <field name="STAT">LOW</field>
+                                            <next>
+                                              <block type="motor_MRT_Node_run" id="CY2!+Tdgs/U[09|HO!yT">
+                                                <field name="MOTOR_CON">MOTOR_L1</field>
+                                                <field name="MOTOR_DIR">0</field>
+                                                <value name="CONTENT">
+                                                  <shadow type="math_number" id="6%en:P==^ZS~Y^9E:Oy6">
+                                                    <field name="NUM">200</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="CPP?9*PAcLcGL~8.Sb@g" x="550" y="2915">
+    <field name="NAME">programa10</field>
+    <statement name="STACK">
+      <block type="serial_println" id="taY@p0zudjMBUb1p1*%R">
+        <value name="CONTENT">
+          <shadow type="text" id="662FoqZDk8O1KD9lwd]R">
+            <field name="TEXT">Programa 10 -- Parpadeo Led</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="tHCCM60/Xp6IGf[cp~-E">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id=";~Jp!{o/SI`Bk1j6;%vc">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="[gtahM}g2jv99lGu}gpP">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_number" id="TeNqkiQD|g$coP^Kc[jR">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="digital_write0" id="B+#lE.rn?CoV#_Btu,Qp">
+                <field name="PIN">23</field>
+                <field name="STAT">HIGH</field>
+                <next>
+                  <block type="digital_write0" id="*Y3[iO)+TvCf;*FJg,v+">
+                    <field name="PIN">25</field>
+                    <field name="STAT">LOW</field>
+                    <next>
+                      <block type="base_delay" id="ds5P)ed]9]OhSqPl8cEd">
+                        <field name="unite">m</field>
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number" id="4`##G1hrQw.bw4?#_Vqe">
+                            <field name="NUM">1000</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="digital_write0" id="(G%yA?5W|#P2:S1P((M2">
+                            <field name="PIN">23</field>
+                            <field name="STAT">LOW</field>
+                            <next>
+                              <block type="digital_write0" id="YNUYiIt,9ndEQ0bWFado">
+                                <field name="PIN">25</field>
+                                <field name="STAT">HIGH</field>
+                                <next>
+                                  <block type="base_delay" id="L[hsLQ()}3mOISP`HMAU">
+                                    <field name="unite">m</field>
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="mXKWd,M4Y=+])hM:CX:=">
+                                        <field name="NUM">1000</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="A,jG)3W0DM]t$LQlULtj" x="-249" y="3013">
+    <field name="NAME">programa11</field>
+    <statement name="STACK">
+      <block type="serial_println" id="fo*_hGbmv,dL[5q1wb{@">
+        <value name="CONTENT">
+          <shadow type="text" id="Q@{AZ6!:0$=1R,N3-(i|">
+            <field name="TEXT">Programa 11 -- Banco</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="jl6^o=hNKp}+~%;AC{-6">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="U`-4!+45Y6I|a_mNlCFi">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="D.]#=:$hlY9,UE1*O@Dd">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Gim_~R`JkFPYI]Mkr8^a">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="math_number" id="k/PJ5Y?VXbz5R7w/Wah8">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="controls_if" id="OlsWK.3Senf9hF4i+KV1">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="}0*U9o2IHVm(;mmxCv(Y">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="LDR_sensor2" id="NE6ZV}UU58EC[;8*-y=%">
+                        <field name="PIN_LDR">39</field>
+                        <field name="OUTPUT_VALUE">1</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="EE/,:Lu.GR*H5fq_pcGc">
+                        <field name="NUM">400</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="digital_write0" id="#Q.M[l*Vqr_$+a/hkUrv">
+                    <field name="PIN">23</field>
+                    <field name="STAT">HIGH</field>
+                    <next>
+                      <block type="digital_write0" id="}TG=w%)mw`iBJz}@I~|(">
+                        <field name="PIN">25</field>
+                        <field name="STAT">HIGH</field>
+                        <next>
+                          <block type="procedures_callnoreturn" id="~bfbx=}jH)c{7QQZogC/">
+                            <mutation name="Forward">
+                              <arg name="speed"></arg>
+                            </mutation>
+                            <value name="ARG0">
+                              <block type="math_number" id="xfPm,v9h]3Z]$6L})5Oy">
+                                <field name="NUM">225</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="digital_write0" id="Jd)MO]qp//=r/$sUk-X.">
+                    <field name="PIN">23</field>
+                    <field name="STAT">LOW</field>
+                    <next>
+                      <block type="digital_write0" id="*Ia|k@vP+U,N|LLj[@o-">
+                        <field name="PIN">25</field>
+                        <field name="STAT">LOW</field>
+                        <next>
+                          <block type="procedures_callnoreturn" id="%8[M()o{ba-G|4V,=)(b">
+                            <mutation name="Stop"></mutation>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
